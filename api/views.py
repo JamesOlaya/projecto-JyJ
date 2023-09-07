@@ -6,12 +6,16 @@ from django.views.decorators.csrf import csrf_exempt
 import json
 
 def index(request):
-    pass
+    return render(request, 'index.html')
 
 def login(request):
-    pass
+    return render(request, 'login/login.html')
 
 def create_account(request):
-    pass
+    return render(request,'create_account/create_account.html')
+
 def recovery_password(request):
-    pass
+    return render (request, 'recover/recover.html')
+
+
+
