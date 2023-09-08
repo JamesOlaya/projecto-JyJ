@@ -1,33 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/api/static/CSS/login.css">
-    <title>Login</title>
-</head>
-<body>
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+<div class="login">
     <div class="cuadro">
-        <div>
-            <h1 class="iniciar_sesion">Inicio de Sesión</h1>
+        <div class="center">
+            <h1 class="iniciar_sesion">Inicia Sesión</h1>
         </div>
-        <div>
-            <h2>Usuario:</h2>
-                <input type="text">
+        <div class="center espacio">
+            <h2>Correo:</h2>
+            <input type="email" class="form-control input" placeholder="Correo" aria-label="Correo" aria-describedby="basic-addon1" >      
             <h2>Contraseña:</h2>
-                <input type="password">
+            <input type="password" class="form-control input" placeholder="Contraseña" aria-label="Contraseña" aria-describedby="basic-addon1">
+            <h2>Cargo:</h2>
+            <select styleid="typeDocument" name="typeDocument" id="typeDocument" size="1">
+                <option value="AD">Administrador</option>
+                <option value="Client">Cliente</option>
+    
+            </select>
+        <div class="enviar center">
+            <a href="./index.html"><button type="button" class="btn btn-outline-light accion">Iniciar</button></a>
         </div>
-        <div class="enviar">
-            <button>Ingresar</button>
-        </div>
-        <div class="create_account">
+        <div class="create_account center">
             <a href="./create_account.html">Crear Cuenta</a>
         </div>
-        <div class="recover">
-            <a href="./recover.html">¿Olvidaste tú contraseña?</a>
-        </div>
-        <p>&copy; Empresa J y J</p>
-    </div>
-</body>
-</html>
+        <p class="center enviar">&copy; Empresa J y J</p>
+    </div>   
+</div>
+
+{% endblock %}
