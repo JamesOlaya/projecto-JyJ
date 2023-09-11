@@ -1,19 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
 
 .title{
     text-align: center;
+    font-family: 'Happy Monkey', cursive;
+    background-color: rgb(27, 74, 161);
+    margin:0% 5% 0% 5%;
+    border-radius: 1rem;
+    color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
-
 #index{
     text-align: center;
-    padding-top:20px;
+    padding-top: 1.5%;
     background-image: url(../images/Captura\ desde\ 2023-09-07\ 08-58-40.png);
+    
 }
-ul{
-    list-style-type: none;
-    margin: 0;
-    padding: .3rem;
-    overflow: hidden;
-}
+
 li{
     float: left;
     margin-left: 1rem;
@@ -29,6 +31,7 @@ li > a{
 
 
 .cuadro_principal{
+    border: #c2d0d4 5px solid;
     background-color: #c2d0d4;
     padding:1%1%1%1%;
     margin: 1% 10% 1% 10%;
@@ -36,23 +39,35 @@ li > a{
     -webkit-box-shadow: 14px 8px 84px -4px rgba(226,220,232,1);
     -moz-box-shadow: 14px 8px 84px -4px rgba(226,220,232,1);
     box-shadow: 14px 8px 84px -4px rgba(226,220,232,1); 
+    font-family: 'Happy Monkey', cursive;
 
-}
-.contain{
-    display: flex;
 }
 .center{
     text-align: center;
     align-items: center;
     align-content: center;
 }
-.buton{
-    text-align: center;
-}
+
 .log{
     display: flex;
+    justify-content: end;
+    padding-right: 3%;
+    font-family: 'Happy Monkey', cursive;
+    
+}
+.navegacion{
+    background-color: #c2d0d4;
+    position: sticky;
+    top: 0;
+    font-weight: 500;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    margin: 0% 2% 0% 2%;   
+    border-radius: 1rem;
+    font-family: 'Happy Monkey', cursive;
 }
 
-
-
-
+.ir{
+    margin-left: 87%;
+    margin-right: 5%;
+       
+}

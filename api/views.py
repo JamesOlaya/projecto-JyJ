@@ -29,8 +29,7 @@ def create_account(request):
         Usuario.objects.create(correo =correo, nombre=nombre, usuario=usuario, password=password, telefono=telefono)
         return redirect('/login')
 
-def recovery_password(request):
-    return render (request, 'recover/recover.html')
+
 
 
 
