@@ -4,7 +4,7 @@
 <div class="login">
     <div class="cuadro">
         <div class="center">
-            <h1 class="iniciar_sesion">Inicia Sesión</h1>
+            <h1 class="iniciar_sesion">¡Ingresa con tu cuenta!</h1>
         </div>
         <div class="center espacio">
             <h2>Correo:</h2>
@@ -15,16 +15,15 @@
             <select styleid="typeDocument" name="typeDocument" id="typeDocument" size="1">
                 <option value="AD">Administrador</option>
                 <option value="Client">Cliente</option>
-    
             </select>
         <div class="enviar center">
-            <a href="./index.html"><button type="button" class="btn btn-outline-light accion">Iniciar</button></a>
+            <a href="{% url 'index'%}"><button type="button" class="btn btn-outline-dark ir">Iniciar</button></a>
         </div>
         <div class="create_account center">
-            <a href="./create_account.html">Crear Cuenta</a>
+            <a href="{% url 'occount'%}">¿No tienes una cuenta?, ¡Créala!</a>
         </div>
         <p class="center enviar">&copy; Empresa J y J</p>
-    </div>   
+    </div>  
 </div>
 
 {% endblock %}

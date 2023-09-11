@@ -2,35 +2,37 @@
 
 {% block content %}
 <div class="login">
-   <div class="cuadro2">
-    <div class="center">
-        <h1 class="datos">Registrate:</h1>
+    <div class="cuadro2">
+        <div class="center">
+            <h1 class="datos">¡Regístrate!</h1>
+        </div>
+        <div class="center espacio">
+            <h2>Nombre:</h2>
+            <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" aria-describedby="basic-addon1">
+        </div>
+        <div class="center espacio">
+            <h2>Usuario:</h2>
+            <input type="text" class="form-control" placeholder="Usuario" aria-label="Usuario" aria-describedby="basic-addon1">      
+        </div>
+        <div class="center espacio">
+            <h2>Correo:</h2>
+            <input type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
+        </div>
+        <div class="center espacio">
+            <h2>Teléfono:</h2>
+            <input type="text" class="form-control" placeholder="Teléfono" aria-label="Télefono" aria-describedby="basic-addon1">
+        </div>
+        <div class="center espacio">
+            <h2>Contraseña:</h2>
+            <input type="password" class="form-control" placeholder="Contraseña" aria-label="Contraseña" aria-describedby="basic-addon2">
+        </div>
+        <div class="enviar center">     
+            <a href="{% url 'login'%}">><button type="button" class="btn btn-outline-light ir">Crear Cuenta</button></a>
+        </div>
+        
+        <p class="center">&copy; Empresa J y J</p>
     </div>
-    <div class="center espacio">
-        <h2>Nombre:</h2>
-        <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" aria-describedby="basic-addon1">
-    </div>
-    <div class="center espacio">
-        <h2>Usuario:</h2>
-        <input type="text" class="form-control" placeholder="Usuario" aria-label="Usuario" aria-describedby="basic-addon1">      
-    </div>
-    <div class="center espacio">
-        <h2>Correo:</h2>
-        <input type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
-    </div>
-    <div class="center espacio">
-        <h2>Teléfono:</h2>
-        <input type="text" class="form-control" placeholder="Teléfono" aria-label="Télefono" aria-describedby="basic-addon1">
-    </div>
-    <div class="center espacio">
-        <h2>Contraseña:</h2>
-        <input type="password" class="form-control" placeholder="Contraseña" aria-label="Contraseña" aria-describedby="basic-addon2">
-    </div>
-    <div class="enviar center">
-        <a href="./login.html"><button type="button" class="btn btn-outline-light accion">Crear Cuenta</button></a>
-    </div>
-    <p class="center">&copy; Empresa J y J</p>
-    </div> 
+
 </div>
 
 {% endblock %}

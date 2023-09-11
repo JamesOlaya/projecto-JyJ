@@ -3,7 +3,7 @@ from django.db import models
 class Usuario(models.Model):
     correo = models.CharField(max_length=50)
     nombre= models.CharField (max_length=30)
-    Usuario= models.CharField(max_length=30)
+    usuario= models.CharField(max_length=30)
     password= models.CharField(max_length=20)
     telefono= models.IntegerField()
 

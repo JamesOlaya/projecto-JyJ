@@ -1,158 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
 .login{
-  text-align: center;
-  padding-top:20px;
-  background-image: url(../images/Captura\ desde\ 2023-09-07\ 08-58-40.png);
-  padding: 3% 26% 3% 26%;
-  width: 100%;
-  height: 100%;
+    text-align: center;
+    padding-top:20px;
+    background-image: url(../images/Captura\ desde\ 2023-09-07\ 08-58-40.png);
+    padding: 3% 26% 3% 26%;
+    width: 100%;
+    height: 100%;
+    
 }
 .enviar{
-  padding-top: 2rem;
-  padding-bottom: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
 }
 .create_account{
-  padding-top: 20px;   
+    padding-top: 20px;   
 }
 .cuadro{
-  border: #C0D3E6 5px solid;
-  background-color: #C0D3E6;
-  padding:1%1%1%1%;
-  margin: 1% 10% 1% 10%;
-  border-radius: 2.5rem;
-  -webkit-box-shadow: 14px 8px 84px -4px rgba(226,220,232,1);
-  -moz-box-shadow: 14px 8px 84px -4px rgba(226,220,232,1);
-  box-shadow: 14px 8px 84px -4px rgba(226,220,232,1); 
-  
-
+    border: #C0D3E6 5px solid;
+    background-color: #C0D3E6;
+    padding:1%1%1%1%;
+    margin: 0.5% 10% 0.5% 10%;
+    border-radius: 2.5rem;
+    -webkit-box-shadow: 14px 8px 84px -4px rgba(226,220,232,1);
+    -moz-box-shadow: 14px 8px 84px -4px rgba(226,220,232,1);
+    box-shadow: 14px 8px 84px -4px rgba(226,220,232,1);
+    font-family: 'Happy Monkey', cursive;
 }
 .cuadro2{
-  border: #C0D3E6 5px solid;
-  background-color: #C0D3E6;
-  padding:1%1%1%1%;
-  margin: 0.5% 10% 0.5% 10%;
-  border-radius: 2.5rem;
-  -webkit-box-shadow: 14px 8px 84px -4px rgba(226,220,232,1);
-  -moz-box-shadow: 14px 8px 84px -4px rgba(226,220,232,1);
-  box-shadow: 14px 8px 84px -4px rgba(226,220,232,1); 
-  justify-content: space-around;
+    border: #C0D3E6 5px solid;
+    background-color: #C0D3E6;
+    padding:1%1%1%1%;
+    margin: 0.5% 10% 0.5% 10%;
+    border-radius: 2.5rem;
+    -webkit-box-shadow: 14px 8px 84px -4px rgba(226,220,232,1);
+    -moz-box-shadow: 14px 8px 84px -4px rgba(226,220,232,1);
+    box-shadow: 14px 8px 84px -4px rgba(226,220,232,1); 
+    justify-content: space-around;
+    font-family: 'Happy Monkey', cursive;
 
 }
 .iniciar_sesion{
-  padding-bottom: 10%;
-  padding-top: 2%;
+    padding-bottom: 10%;
+    padding-top: 2%;
 }
 .datos{
-  padding-top: 2%;
-  padding-bottom: 5%;
+    padding-top: 2%;
+    padding-bottom: 5%; 
 }
 .espacio{
-  padding-bottom: 1%;
+    padding-bottom: 1%;
 }
 
 .enviar2{
-  padding-top: 1rem;
+    padding-top: 1rem;
 }
 
 .center{
-  align-items: center;
-  align-content: center;
-  text-align: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
 
-}
-
-.login-container {
-width: 300px;
-padding: 20px;
-background: #fff;
-border-radius: 8px;
-box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.932), 0px 0px 0px 3px #3498db, inset 0px 0px 10px rgb(255, 255, 255);
-}
-
-.login-header {
-font-size: x-large;
-font-weight: 600;
-text-align: center;
-margin-bottom: 20px;
-}
-
-.login-header h1 {
-color: #ffffff;
-font-size: 24px;
-}
-
-.login-input {
-width: 100%;
-padding: 10px;
-margin-bottom: 15px;
-border: none;
-background: #f5f5f5;
-border-radius: 4px;
-box-shadow: inset 0px 1px 3px rgba(255, 255, 255, 0.904);
-}
-
-.login-button {
-width: 100%;
-padding: 10px;
-border: none;
-background: #3498db;
-color: #fff;
-font-weight: bold;
-border-radius: 4px;
-cursor: pointer;
-box-shadow: 0px 3px 6px rgba(255, 255, 255, 0.952), inset 0px 1px 3px rgb(255, 255, 255);
-transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.login-button:hover {
-background: #2980b9;
-transform: translateY(-2px);
-}
-
-.accion {
-  --glow-color: rgb(152, 102, 218);
-  --glow-spread-color: rgba(141, 77, 179, 0.685);
-  --enhanced-glow-color: rgb(178, 146, 221);
-  --btn-color: rgb(113, 78, 145);
-  border: .25em solid var(--glow-color);
-  padding: 1em 3em;
-  color: var(--glow-color);
-  font-size: 15px;
-  font-weight: bold;
-  background-color: var(--btn-color);
-  border-radius: 1em;
-  outline: none;
-  box-shadow: 0 0 1em .25em var(--glow-color),
-         0 0 4em 1em var(--glow-spread-color),
-         inset 0 0 .75em .25em var(--glow-color);
-  text-shadow: 0 0 .5em var(--glow-color);
-  position: relative;
-  transition: all 0.3s;
- }
- 
- .accion::after {
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  top: 120%;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: var(--glow-spread-color);
-  filter: blur(2em);
-  opacity: .7;
-  transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
- }
- 
- .accion:hover {
-  color: var(--btn-color);
-  background-color: var(--glow-color);
-  box-shadow: 0 0 1em .25em var(--glow-color),
-         0 0 4em 2em var(--glow-spread-color),
-         inset 0 0 .75em .25em var(--glow-color);
- }
- 
- .accion:active {
-  box-shadow: 0 0 0.6em .25em var(--glow-color),
-         0 0 2.5em 2em var(--glow-spread-color),
-         inset 0 0 .5em .25em var(--glow-color);
 }

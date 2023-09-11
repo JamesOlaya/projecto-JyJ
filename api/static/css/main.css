@@ -1,3 +1,4 @@
+
 .title{
     text-align: center;
 }
@@ -37,26 +38,21 @@ li > a{
     box-shadow: 14px 8px 84px -4px rgba(226,220,232,1); 
 
 }
+.contain{
+    display: flex;
+}
 .center{
     text-align: center;
     align-items: center;
     align-content: center;
 }
+.buton{
+    text-align: center;
+}
 .log{
     display: flex;
-    justify-content: end;
-    padding-right: 3%;
-    text-decoration: none;
 }
 
-#contein{
-    display: flex;
-    padding: 1rem;
-}
-.titulo{
-    justify-content: end;
-    width: 90%;
-}
-.buton{
-    width: 10%;
-}
+
+
+
