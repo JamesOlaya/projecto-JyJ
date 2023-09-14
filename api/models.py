@@ -5,7 +5,7 @@ class Usuario(models.Model):
     nombre= models.CharField (max_length=30, null=False, blank=False)
     usuario= models.CharField(max_length=30, null=False, blank=False)
     password= models.CharField(max_length=20, null=False, blank=False)
-    telefono= models.IntegerField( null=False, blank=False)
+    telefono= models.BigIntegerField( null=False, blank=False)
 
 
 class Encargado(models.Model):

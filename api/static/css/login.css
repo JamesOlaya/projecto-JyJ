@@ -1,16 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
+body{
+    height: 100%;
+}
 .login{
     text-align: center;
     padding-top:20px;
-    background-image: url(../images/Captura\ desde\ 2023-09-07\ 08-58-40.png);
-    padding: 3% 26% 3% 26%;
+    padding: 3% 26% 10% 26%;
     width: 100%;
     height: 100%;
+    background-image: url(../images/Captura\ desde\ 2023-09-07\ 08-58-40.png);
     
 }
 .enviar{
     padding-top: 2rem;
     padding-bottom: 1rem;
+    padding-right: 40%;
 }
 .create_account{
     padding-top: 20px;   
@@ -18,8 +22,8 @@
 .cuadro{
     border: #C0D3E6 5px solid;
     background-color: #C0D3E6;
-    padding:1%1%1%1%;
-    margin: 0.5% 10% 0.5% 10%;
+    padding:1.5%1.5%1.5%1.5%;
+    margin: 0.5% 1% 0.5% 1%;
     border-radius: 2.5rem;
     -webkit-box-shadow: 14px 8px 84px -4px rgba(226,220,232,1);
     -moz-box-shadow: 14px 8px 84px -4px rgba(226,220,232,1);
@@ -29,14 +33,15 @@
 .cuadro2{
     border: #C0D3E6 5px solid;
     background-color: #C0D3E6;
-    padding:1%1%1%1%;
-    margin: 0.5% 10% 0.5% 10%;
+    padding:1.5%1.5%1.5%1.5%;
+    margin: 0.5% 1% 0.5% 1%;
     border-radius: 2.5rem;
     -webkit-box-shadow: 14px 8px 84px -4px rgba(226,220,232,1);
     -moz-box-shadow: 14px 8px 84px -4px rgba(226,220,232,1);
     box-shadow: 14px 8px 84px -4px rgba(226,220,232,1); 
     justify-content: space-around;
     font-family: 'Happy Monkey', cursive;
+    
 
 }
 .iniciar_sesion{
@@ -47,9 +52,7 @@
     padding-top: 2%;
     padding-bottom: 5%;
 }
-.espacio{
-    padding-bottom: 1%;
-}
+
 
 .enviar2{
     padding-top: 1rem;

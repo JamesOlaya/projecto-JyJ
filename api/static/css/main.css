@@ -4,23 +4,29 @@
     text-align: center;
     font-family: 'Happy Monkey', cursive;
     background-color: rgb(27, 74, 161);
-    margin:0% 5% 0% 5%;
+    margin-top: 0.5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
     border-radius: 1rem;
     color: #ffffff;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
-#index{
+.background{
     text-align: center;
     padding-top: 1.5%;
     background-image: url(../images/Captura\ desde\ 2023-09-07\ 08-58-40.png);
-    
 }
-
-li{
+.ul{
+    list-style-type: none;
+    margin: 0;
+    padding: .3rem;
+    overflow: hidden;
+}
+.li{
     float: left;
     margin-left: 1rem;
 }
-li > a{
+.li > a{
     display: block;
     color: black;
     text-decoration: none;
@@ -52,14 +58,14 @@ li > a{
     display: flex;
     justify-content: end;
     padding-right: 3%;
+    text-decoration: none;
     font-family: 'Happy Monkey', cursive;
     
 }
 .navegacion{
     background-color: #c2d0d4;
     position: sticky;
-    top: 0;
-    font-weight: 500;
+    
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     margin: 0% 2% 0% 2%;   
     border-radius: 1rem;
@@ -67,7 +73,11 @@ li > a{
 }
 
 .ir{
-    margin-left: 87%;
-    margin-right: 5%;
-       
+    margin-left: 75%;
+    padding-right:10% ;
+    margin-right: 10%;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+
+    
 }
