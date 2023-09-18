@@ -15,31 +15,22 @@ def login(request):
     return render(request, 'login/login.html')
 
 def create_account(request):
-   
-    if request.method == 'GET':
-        return render(request, 'create_account/create_account.html',{
-            'form': create_user()
-        })
-    #else:
-       # jd = json.loads(request.body)
-        #if jd:
-            #correo = jd['correo']
-            
-            #nombre= jd['nombre']
-            #usuario= jd['usuario']
-            #password= jd['password']
-            #telefono= jd['telefono']
-            #Usuario.objects.create(correo =correo, nombre=nombre, usuario=usuario, password=password, telefono=telefono)
-        
-    return redirect('/login')
+    if request.method == 'POST':
+        form = create_user(request.POST)
+        if form.is_valid():
+            form.save()
+    else:
+        form = create_user()
+    return render(request, 'create_account/create_account.html', {'form': form})
     
-# def message(request):
-    render(request, {
-        ''
-    })
-    return redirect('/login')
-def inicio_sesion (request):
-    pass 
+def administrador(request):
+    return render(request, 'administrador/administrador.html')
+
+def cliente(request):
+    return render(request, 'cliente/cliente.html')
+
+def usuario(request):
+    return render(request, 'usuario/usuario.html')
 
 
 

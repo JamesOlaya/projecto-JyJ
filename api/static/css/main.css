@@ -6,6 +6,8 @@
     background-color: rgb(27, 74, 161);
     margin-top: 0.5%;
     padding-top: 1%;
+    margin-left: 8%;
+    margin-right: 8%;
     padding-bottom: 1%;
     border-radius: 1rem;
     color: #ffffff;
@@ -14,7 +16,9 @@
 .background{
     text-align: center;
     padding-top: 1.5%;
-    background-image: url(../images/Captura\ desde\ 2023-09-07\ 08-58-40.png);
+    background-color:rgb(255, 255, 255);
+    
+    
 }
 .ul{
     list-style-type: none;
@@ -37,16 +41,13 @@
 
 
 .cuadro_principal{
-    border: #c2d0d4 5px solid;
-    background-color: #c2d0d4;
+    
     padding:1%1%1%1%;
     margin: 1% 10% 1% 10%;
     border-radius: 2.5rem;
-    -webkit-box-shadow: 14px 8px 84px -4px rgba(226,220,232,1);
-    -moz-box-shadow: 14px 8px 84px -4px rgba(226,220,232,1);
-    box-shadow: 14px 8px 84px -4px rgba(226,220,232,1); 
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     font-family: 'Happy Monkey', cursive;
-
+    background-color: rgb(183, 233, 248);
 }
 .center{
     text-align: center;
@@ -62,14 +63,13 @@
     font-family: 'Happy Monkey', cursive;
     
 }
-.navegacion{
-    background-color: #c2d0d4;
+.navegacion{   
     position: sticky;
-    
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     margin: 0% 2% 0% 2%;   
     border-radius: 1rem;
     font-family: 'Happy Monkey', cursive;
+    background-color: rgb(183, 233, 248);
 }
 
 .ir{

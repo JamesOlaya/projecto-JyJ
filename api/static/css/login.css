@@ -8,7 +8,8 @@ body{
     padding: 3% 26% 10% 26%;
     width: 100%;
     height: 100%;
-    background-image: url(../images/Captura\ desde\ 2023-09-07\ 08-58-40.png);
+    background-color:rgb(255, 255, 255);
+    
     
 }
 .enviar{
@@ -20,25 +21,21 @@ body{
     padding-top: 20px;   
 }
 .cuadro{
-    border: #C0D3E6 5px solid;
-    background-color: #C0D3E6;
+    border: rgb(183, 233, 248) 5px solid;
+    background-color: rgb(183, 233, 248);
     padding:1.5%1.5%1.5%1.5%;
     margin: 0.5% 1% 0.5% 1%;
     border-radius: 2.5rem;
-    -webkit-box-shadow: 14px 8px 84px -4px rgba(226,220,232,1);
-    -moz-box-shadow: 14px 8px 84px -4px rgba(226,220,232,1);
-    box-shadow: 14px 8px 84px -4px rgba(226,220,232,1);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     font-family: 'Happy Monkey', cursive;
 }
 .cuadro2{
-    border: #C0D3E6 5px solid;
-    background-color: #C0D3E6;
+    border: rgb(183, 233, 248) 5px solid;
+    background-color: rgb(183, 233, 248);
     padding:1.5%1.5%1.5%1.5%;
     margin: 0.5% 1% 0.5% 1%;
     border-radius: 2.5rem;
-    -webkit-box-shadow: 14px 8px 84px -4px rgba(226,220,232,1);
-    -moz-box-shadow: 14px 8px 84px -4px rgba(226,220,232,1);
-    box-shadow: 14px 8px 84px -4px rgba(226,220,232,1); 
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     justify-content: space-around;
     font-family: 'Happy Monkey', cursive;
     

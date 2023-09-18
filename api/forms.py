@@ -1,6 +1,8 @@
 from django import forms
+from django.contrib.auth.forms import UserCreationForm
+from .models import Usuario,Encargado,Cliente,Inventario,Pedido,Estado
 
-class create_user(forms.Form):
+class create_user(UserCreationForm):
     correo = forms.CharField(max_length=50)
     nombre= forms.CharField (max_length=30)
     Usuario= forms.CharField(max_length=30)
