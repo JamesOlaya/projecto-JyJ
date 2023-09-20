@@ -8,20 +8,53 @@ import json
 from .models import Usuario, Encargado, Cliente, Pedido
 
 
+
 def index(request):
     return render(request, 'index.html')
 
 def login(request):
-    return render(request, 'login/login.html')
-
-def create_account(request):
-    if request.method == 'POST':
-        form = create_user(request.POST)
-        if form.is_valid():
-            form.save()
+    if request.method == 'GET':
+        return render(request, 'login/login.html')
     else:
-        form = create_user()
-    return render(request, 'create_account/create_account.html', {'form': form})
+        clientes = list (Usuario.objects.all())
+        usuario= request.POST['usuario']
+        password =request.POST['Contraseña']
+        ver_usuario = False
+        ver_password = False
+
+        for cliente in clientes:
+            if cliente.usuario == usuario and ver_usuario == False:
+                ver_usuario = True
+            if cliente.password == password and ver_password == False:
+                ver_password = True
+        if ver_usuario == True and ver_password == True:
+            return redirect('index')
+        else:
+            return redirect('occount')
+
+            
+
+
+def create_account(requst):
+    if requst.method == 'GET':
+        return render(requst, 'create_account/create_account.html',{
+            'form': create_user,
+        })
+    else:
+        nombre = requst.POST['nombre']
+        usuario = requst.POST['usuario']
+        correo = requst.POST['correo']
+        telefono = requst.POST['telefono']
+        password = requst.POST['contraseña']
+
+        Cliente.objects.create(usuario=usuario, password=password)
+        Usuario.objects.create(nombre=nombre,usuario=usuario,correo=correo,telefono=telefono,password=password)
+        return redirect('/login')
+
+
+
+ 
+
     
 def administrador(request):
     return render(request, 'administrador/administrador.html')

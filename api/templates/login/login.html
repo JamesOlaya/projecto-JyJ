@@ -6,19 +6,23 @@
         <div class="center">
             <h1 class="iniciar_sesion">¡Ingresa con tu cuenta!</h1>
         </div>
-        <div class="center espacio">
-            <h2>Correo:</h2>
-            <input type="email" class="form-control input" placeholder="Correo" aria-label="Correo" aria-describedby="basic-addon1" >      
-            <h2>Contraseña:</h2>
-            <input type="password" class="form-control input" placeholder="Contraseña" aria-label="Contraseña" aria-describedby="basic-addon1">
-            <h2>Cargo:</h2>
-            <select styleid="typeDocument" name="typeDocument" id="typeDocument" size="1">
-                <option value="AD">Administrador</option>
-                <option value="Client">Cliente</option>
-            </select>               
-        <div class="enviar center">
-            <button type="button" class="btn btn-outline-ligth ir border border-dark"><a href="{% url 'index'%}" style="text-decoration: none; color: black;">Iniciar</a></button>
-        </div>
+        <form method="post">
+            {% csrf_token %}
+            <div class="center espacio">
+            
+                <h2>usuario:</h2>
+                <input type="text" class="form-control input" placeholder="usuario" aria-label="usuario" aria-describedby="basic-addon1" name="usuario">      
+                <h2>Contraseña:</h2>
+                <input type="password" class="form-control input" placeholder="Contraseña" aria-label="Contraseña" aria-describedby="basic-addon1" name="Contraseña">
+                <h2>Cargo:</h2>
+                <select styleid="typeDocument" name="typeDocument" id="typeDocument" size="1">
+                    <option value="AD">Administrador</option>
+                    <option value="Client">Cliente</option>
+                </select>               
+            <div class="enviar center">
+                <button type="submit" class="btn btn-outline-ligth ir border border-dark">Iniciar</button>
+            </div>
+        </form>
         <div class="create_account center ">
             <a href="{% url 'occount'%}">¿No tienes una cuenta?, ¡Créala!</a>
         </div>
