@@ -11,29 +11,29 @@
             {% csrf_token %}
             <div class="center espacio">
                 <h2>Nombre:</h2>
-                <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" aria-describedby="basic-addon1" name="nombre" >
+                <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" aria-describedby="basic-addon1" name="nombre" maxlength="30" required>
             </div>
             <div class="center espacio">
                 <h2>Usuario:</h2>
-                <input type="text" class="form-control" placeholder="Usuario" aria-label="Usuario" aria-describedby="basic-addon1" name="usuario">      
+                <input type="text" class="form-control" placeholder="Usuario" aria-label="Usuario" aria-describedby="basic-addon1" name="usuario" maxlength="30" required>      
             </div>
             <div class="center espacio">
                 <h2>Correo:</h2>
-                <input type="email" class="form-control" placeholder="Correo" aria-label="Correo" aria-describedby="basic-addon1" name="correo">
+                <input type="text" class="form-control" placeholder="Correo" aria-label="Correo" aria-describedby="basic-addon1" name="correo" maxlength="50" required>
             </div>
             <div class="center espacio">
                 <h2>Teléfono:</h2>
-                <input type="text" class="form-control" placeholder="Teléfono" aria-label="Télefono" aria-describedby="basic-addon1" name="telefono">
+                <input type="text" class="form-control" placeholder="Teléfono" aria-label="Télefono" aria-describedby="basic-addon1" name="telefono" maxlength="10" required>
             </div>
             <div class="center espacio">
                 <h2>Contraseña:</h2>
-                <input type="password" class="form-control" placeholder="Contraseña" aria-label="Contraseña" aria-describedby="basic-addon2" name="contraseña">
+                <input type="password" class="form-control" placeholder="Contraseña" aria-label="Contraseña" aria-describedby="basic-addon2" name="contraseña" maxlength="20" required>
             </div>
             <div class="enviar center">     
                 <button type="submit" class="btn ir border border-dark">Crear Cuenta</button>
             </div>
         </form>
-        <p class="center">&copy; Empresa J y J</p>
+        <p class="center">&copy; Empresa J y J</p> 
     </div>
 
 </div>
