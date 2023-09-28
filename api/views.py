@@ -6,6 +6,7 @@ from django.views.decorators.csrf import csrf_exempt
 from .forms import create_cliente, create_user, create_encargado,crear_pedido
 import json
 from .models import Usuario, Encargado, Cliente, Pedido
+from django.contrib import messages 
 
 
 
@@ -30,7 +31,8 @@ def login(request):
         if ver_usuario == True and ver_password == True:
             return redirect('index')
         else:
-            return redirect('occount')
+            messages.add_message(request=request, level=messages.SUCCESS, message='el usuario y/o la contraseña no son correcto, por favor vuelvalo a intentar')
+            return redirect('login')
 
             
 
