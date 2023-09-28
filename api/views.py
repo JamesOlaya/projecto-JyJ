@@ -86,7 +86,7 @@ def create_product(request):
         return redirect('/login')
 
 def delete_material(request):
-    if request.method == 'PUT':
+    if request.method == 'delete':
         id=request.PUT['id']
         materiales = list(Producto.objects.filter(id=id).values())
         if len(materiales) > 0:
