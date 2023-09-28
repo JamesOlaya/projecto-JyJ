@@ -16,6 +16,10 @@ class create_encargado(forms.Form):
 class create_cliente(forms.Form):
     usuario = forms.CharField(max_length=20)
     password = forms.CharField(max_length=20)
+    
+class create_producto(forms.Forms):
+    nombreP=forms.CharField(max_length=30)
+    predioP=forms.IntegerField()
 
 class crear_pedido(forms.Form):
     descripccion = forms.CharField(max_length=200)

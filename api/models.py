@@ -23,6 +23,10 @@ class Inventario(models.Model):
     bodega= models.CharField(max_length=10, null=False, blank=False)
 
 
+class Producto(models.Model):
+    nombreP=models.CharField(max_length=30,null=False, blank=False)
+    predioP=models.BigIntegerField(null=False, blank=False)
+
 
 class Pedido(models.Model):
     descripccion = models.CharField(max_length=200, null=False, blank=False)
