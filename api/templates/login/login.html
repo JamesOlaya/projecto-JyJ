@@ -10,15 +10,23 @@
             {% csrf_token %}
             <div class="center espacio">
             
-                <h2>usuario:</h2>
-                <input type="text" class="form-control input" placeholder="usuario" aria-label="usuario" aria-describedby="basic-addon1" name="usuario">      
+                <h2>Usuario:</h2>
+                <input type="text" class="form-control input" placeholder="usuario" aria-label="usuario" aria-describedby="basic-addon1" name="usuario" > 
                 <h2>Contraseña:</h2>
                 <input type="password" class="form-control input" placeholder="Contraseña" aria-label="Contraseña" aria-describedby="basic-addon1" name="Contraseña">
                 <h2>Cargo:</h2>
                 <select styleid="typeDocument" name="typeDocument" id="typeDocument" size="1">
                     <option value="AD">Administrador</option>
                     <option value="Client">Cliente</option>
-                </select>               
+                </select>
+                
+                {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                            <li {% if message.tags %} class="alert alert-{{message.tags}}" {% endif %} >{{ message }} </li>
+                        {% endfor %}
+                {% endif%}
+                    </ul>
             <div class="enviar center">
                 <button type="submit" class="btn btn-outline-ligth ir border border-dark">Iniciar</button>
             </div>
@@ -26,8 +34,10 @@
         <div class="create_account center ">
             <a href="{% url 'occount'%}">¿No tienes una cuenta?, ¡Créala!</a>
         </div>
+
         <p class="center">&copy; Empresa J y J</p>
     </div>
 </div>
 
-{% endblock %} 
+
+{% endblock %}

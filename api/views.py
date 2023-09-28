@@ -3,9 +3,10 @@ from django.http.response import JsonResponse
 from django.utils.decorators import method_decorator
 from django.views import View
 from django.views.decorators.csrf import csrf_exempt
-from .forms import  create_user,create_producto ,crear_pedido
+from .forms import create_user,create_producto
 import json
-from .models import Usuario, Encargado, Cliente, Pedido, Producto
+from .models import Usuario, Encargado, Cliente, Pedido,Producto
+from django.contrib import messages 
 
 
 
@@ -25,28 +26,37 @@ def login(request):
         for cliente in clientes:
             if cliente.usuario == usuario and ver_usuario == False:
                 ver_usuario = True
+            else:
+                ver_usuario = False
             if cliente.password == password and ver_password == False:
                 ver_password = True
+            else:
+                ver_password = False
         if ver_usuario == True and ver_password == True:
             return redirect('index')
         else:
-            return redirect('occount')
+            messages.add_message(request=request, level=messages.SUCCESS, message='El usuario y/o la contraseña no son correctos, por favor vuélvalo a intentar.')
+            return redirect('login')
 
-def create_account(request):
-    if request.method == 'GET':
-        return render(request, 'create_account/create_account.html',{
+            
+
+
+def create_account(requst):
+    if requst.method == 'GET':
+        return render(requst, 'create_account/create_account.html',{
             'form': create_user,
         })
     else:
-        nombre = request.POST['nombre']
-        usuario = request.POST['usuario']
-        correo = request.POST['correo']
-        telefono = request.POST['telefono']
-        password = request.POST['contraseña']
+        nombre = requst.POST['nombre']
+        usuario = requst.POST['usuario']
+        correo = requst.POST['correo']
+        telefono = requst.POST['telefono']
+        password = requst.POST['contraseña']
 
         Cliente.objects.create(usuario=usuario, password=password)
         Usuario.objects.create(nombre=nombre,usuario=usuario,correo=correo,telefono=telefono,password=password)
         return redirect('/login')
+
     
 def administrador(request):
     return render(request, 'administrador/administrador.html')
