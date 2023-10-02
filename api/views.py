@@ -3,7 +3,7 @@ from django.http.response import JsonResponse
 from django.utils.decorators import method_decorator
 from django.views import View
 from django.views.decorators.csrf import csrf_exempt
-from .forms import create_cliente, create_user,create_producto
+from .forms import create_user,create_producto
 import json
 from .models import Usuario, Encargado, Cliente, Pedido,Producto
 from django.contrib import messages 
@@ -20,19 +20,24 @@ def login(request):
         clientes = list (Usuario.objects.all())
         usuario= request.POST['usuario']
         password =request.POST['Contraseña']
-        ver_usuario = False
-        ver_password = False
+        status = request.POST['typeDocument']
+        c_usuario = False
+        c_password = False
 
-        for cliente in clientes:
-            if cliente.usuario == usuario and ver_usuario == False:
-                ver_usuario = True
-            if cliente.password == password and ver_password == False:
-                ver_password = True
-        if ver_usuario == True and ver_password == True:
-            return redirect('index')
+
+        for cliente in clientes:    
+            if usuario == cliente.usuario and password == cliente.password:
+                c_password = True
+                c_usuario = True
+
+
+        if c_usuario == True and c_password == True and password != '' and usuario != '' and status == "Client":
+            return redirect('cliente')
+        elif c_usuario == True and c_password == True and password != '' and usuario != '' and status == "AD":  
+           messages.add_message(request=request, level=messages.SUCCESS, message='El usuario no puede ingresar al apartado de administrador.')
         else:
-            messages.add_message(request=request, level=messages.SUCCESS, message='el usuario y/o la contraseña no son correcto, por favor vuelvalo a intentar')
-            return redirect('login')
+           messages.add_message(request=request, level=messages.SUCCESS, message='El usuario y/o la contraseña no son correctos, por favor vuélvalo a intentar.')
+    return redirect('login')
 
             
 
@@ -101,3 +106,4 @@ def delete_material(request):
         return render(request, 'create_account/create_account.html',{
             'form': create_user,
         })
+    

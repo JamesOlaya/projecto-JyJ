@@ -6,48 +6,126 @@
 </div>
 <!DOCTYPE html>
 <html>
-    <body>
+    <body class="background">
         <div class="cuadro_principal">
             <h1 class="center">¡Realiza tú pedido!</h1>
         <div id="carrito" class="center"> 
         </div>
         <div id="total"class="center">
-            <strong>Total: $<span id="total-amount">0 </span> </strong><button class="btn btn-outline-dark" onclick="vaciarCarrito()"> Reiniciar selecciones</button>
+            <strong>Total: $<span id="total-amount">0.00 </span> </strong><button class="btn btn-outline-dark" onclick="vaciarCarrito()"> Reiniciar selecciones</button>
         </div>
         <div class="producto center">
-            <h2>Puerta:</h2>
+            <h1>Puerta:</h1>
             <p>Precio: $1000</p>
-            <input type="text">
-            
-            <button class="btn btn-outline-dark"onclick="agregarAlCarrito('Puerta', 1000)">Agregar al carrito</button>
+            <div>
+                <div class="input-group">
+                    <span class="input-group-text">Medidas</span>
+                    <input type="text" aria-label="Medidas" class="form-control" placeholder="Altura" >
+                    <input type="text" aria-label="Medidas" class="form-control" placeholder="Anchura" >
+                </div>       
+            </div>
+            <div class="input-group input-group mb-3">
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Indica información sobre tú pedido">
+              </div>
+            <div>
+                <button class="btn btn-outline-dark"onclick="agregarAlCarrito('Puerta', 1000)">Hacer cotización</button>
+            </div>
         </div>
-    
         <div class="producto center">
-            <h2>Ventana:</h2>
+            <h1>Ventana:</h1>
             <p>Precio: $1500</p>
-            <button class="btn btn-outline-dark" onclick="agregarAlCarrito('Ventana', 1500)">Agregar al carrito</button>
+            <div>
+                <div class="input-group">
+                    <span class="input-group-text">Medidas</span>
+                    <input type="text" aria-label="Medidas" class="form-control" placeholder="Altura" >
+                    <input type="text" aria-label="Medidas" class="form-control" placeholder="Anchura" >
+                </div>       
+            </div>
+            <div>
+                <div class="input-group input-group mb-3">
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Indica información sobre tú pedido">
+                  </div>
+            </div>
+            <button class="btn btn-outline-dark" onclick="agregarAlCarrito('Ventana', 1500)">Hacer cotización</button>
         </div>
         <div class="producto center">
-            <h2>Cerramiento de Piscina:</h2>
+            <h1>Cerramiento de Piscina:</h1>
             <p>Precio: $1500</p>
-            <button class="btn btn-outline-dark" onclick="agregarAlCarrito('Producto 2', 1500)">Agregar al carrito</button>
+            <div>
+                <div class="input-group">
+                    <span class="input-group-text">Medidas</span>
+                    <input type="text" aria-label="Medidas" class="form-control" placeholder="Altura" >
+                    <input type="text" aria-label="Medidas" class="form-control" placeholder="Anchura" >
+                </div>       
+            </div>
+            <div>
+                <div class="input-group input-group mb-3">
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Indica información sobre tú pedido">
+                  </div>
+            </div>
+            <button class="btn btn-outline-dark" onclick="agregarAlCarrito('Cerramiento de piscina', 1500)">Hacer cotización</button>
         </div>
-    
         <div class="producto center">
-            <h2>Ventanas:</h2>
+            <h1>Balcones en vidrio:</h1>
             <p>Precio: $1500</p>
-            <button class="btn btn-outline-dark" onclick="agregarAlCarrito('Producto 2', 1500)">Agregar al carrito</button>
+            <div>
+                <div class="input-group">
+                    <span class="input-group-text">Medidas</span>
+                    <input type="text" aria-label="Medidas" class="form-control altura" placeholder="Altura" >
+                    <input type="text" aria-label="Medidas" class="form-control altura" placeholder="Anchura" >
+                </div>       
+            </div>
+            <div>
+                <div class="input-group input-group mb-3">
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Indica información sobre tú pedido">
+                  </div>
+            </div>
+            <button class="btn btn-outline-dark" onclick="agregarAlCarrito('Balcones de vidrio', 1500)">Hacer cotización</button>
         </div>
-    
-    
+        <div class="producto center">
+            <h1>Espejo:</h1>
+            <p>Precio: $1500</p>
+            <div>
+                <div class="input-group">
+                    <span class="input-group-text">Medidas</span>
+                    <input type="text" aria-label="Medidas" class="form-control altura" placeholder="Altura" >
+                    <input type="text" aria-label="Medidas" class="form-control altura" placeholder="Anchura" >
+                </div>       
+            </div>
+            <div>
+                <div class="input-group input-group mb-3">
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Indica información sobre tú pedido">
+                  </div>
+            </div>
+            <button class="btn btn-outline-dark" onclick="agregarAlCarrito('Espejo', 1500)">Hacer cotización</button>
+        </div>
+        <div class="producto center">
+            <h1>Divisiones de ducha en vidrio templado:</h1>
+            <p>Precio: $1500</p>
+            <div>
+                <div class="input-group">
+                    <span class="input-group-text">Medidas</span>
+                    <input type="text" aria-label="Medidas" class="form-control altura" placeholder="Altura" >
+                    <input type="text" aria-label="Medidas" class="form-control altura" placeholder="Anchura" >
+                </div>       
+            </div>
+            <div>
+                <div class="input-group input-group mb-3">
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Indica información sobre tú pedido">
+                  </div>
+            </div>
+            <button class="btn btn-outline-dark" onclick="agregarAlCarrito('División de ducha', 1500)">Hacer cotización</button>
+        </div>
         <script> 
             let carrito = [];
             let total = 0;
             
+            
             function agregarAlCarrito(producto, precio) {
-                carrito.push({ producto, precio });
+                carrito.push({ producto, precio});
                 total += precio;
                 actualizarCarrito();
+                
             }
             function actualizarCarrito() {
                 const carritoElement = document.getElementById("carrito");
@@ -60,7 +138,6 @@
                     itemElement.innerText = `${item.producto}: $${item.precio.toFixed(2)}`;
                     carritoElement.appendChild(itemElement);
                 });
-                
                 totalAmountElement.innerText = total.toFixed(2);
             }
             function vaciarCarrito() {
@@ -76,4 +153,4 @@
 
 
 
-{% endblock %}
+{% endblock %}  

@@ -10,16 +10,15 @@
             {% csrf_token %}
             <div class="center espacio">
             
-                <h2>usuario:</h2>
-                <input type="text" class="form-control input" placeholder="usuario" aria-label="usuario" aria-describedby="basic-addon1" name="usuario" s      
+                <h2>Usuario</h2>
+                <input type="text" class="form-control input" placeholder="usuario" aria-label="usuario" aria-describedby="basic-addon1" name="usuario" required>      
                 <h2>Contraseña:</h2>
-                <input type="password" class="form-control input" placeholder="Contraseña" aria-label="Contraseña" aria-describedby="basic-addon1" name="Contraseña">
+                <input type="password" class="form-control input" placeholder="Contraseña" aria-label="Contraseña" aria-describedby="basic-addon1" name ="Contraseña"required>
                 <h2>Cargo:</h2>
                 <select styleid="typeDocument" name="typeDocument" id="typeDocument" size="1">
                     <option value="AD">Administrador</option>
                     <option value="Client">Cliente</option>
                 </select>
-                
                 {% if messages %}
                     <ul class="messages">
                         {% for message in messages %}
@@ -28,11 +27,11 @@
                 {% endif%}
                     </ul>
             <div class="enviar center">
-                <button type="submit" class="btn btn-outline-ligth ir border border-dark">Iniciar</button>
+                <button type="submit" class="btn btn-outline-danger ir border" style=" text-decoration: none; color: black;">Iniciar</button>
             </div>
         </form>
         <div class="create_account center ">
-            <a href="{% url 'occount'%}">¿No tienes una cuenta?, ¡Créala!</a>
+            <a href="{% url 'occount'%}" style="text-decoration: none; color: rgb(255, 58, 58) ;">¿No tienes una cuenta?, ¡Créala!</a>
         </div>
 
         <p class="center">&copy; Empresa J y J</p>

@@ -8,18 +8,11 @@ class create_user(UserCreationForm):
     Usuario= forms.CharField(max_length=30)
     password= forms.CharField(max_length=20)
     telefono= forms.IntegerField()
-
-class create_encargado(forms.Form):
-    usuario = forms.CharField(max_length=20)
-    password = forms.CharField(max_length=20)
-
-class create_cliente(forms.Form):
-    usuario = forms.CharField(max_length=20)
-    password = forms.CharField(max_length=20)
     
-class create_producto(forms.Forms):
+
+class create_producto(forms.Form):
     nombreP=forms.CharField(max_length=30)
-    predioP=forms.IntegerField()
+    precioP=forms.IntegerField()
 
 class crear_pedido(forms.Form):
     descripccion = forms.CharField(max_length=200)
@@ -27,4 +20,3 @@ class crear_pedido(forms.Form):
     idCliente = forms.IntegerField()
     cotizacion = forms.CharField(max_length=10)
     direccion = forms.CharField(max_length=10)
-
