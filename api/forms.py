@@ -9,6 +9,7 @@ class create_user(UserCreationForm):
     password= forms.CharField(max_length=20)
     telefono= forms.IntegerField()
     
+
 class create_producto(forms.Form):
     nombreP=forms.CharField(max_length=30)
     precioP=forms.IntegerField()
