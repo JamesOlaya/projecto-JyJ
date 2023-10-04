@@ -34,7 +34,7 @@ def login(request):
                     p_password = True
 
                 if p_usuario == True and p_password == True:
-                    messages.add_message(request=request, level=messages.SUCCESS, message='El usuario no puede ingresar al apartado de administrador.') 
+                    return redirect('administrador')
                 else:
                     messages.add_message(request=request, level=messages.SUCCESS, message='El usuario y/o la contraseña no son correctos, por favor vuélvalo a intentar.')
                     return redirect('login')

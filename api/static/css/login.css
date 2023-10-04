@@ -1,16 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
-body{
-    height: 100%;
-}
+
 .login{
     text-align: center;
     padding-top:20px;
-    padding: 3% 26% 16.5% 26%;
+    padding: 9% 22% 9% 22%;
     width: 100%;
     height: 100%;
     background-color:rgb(255, 255, 255);
-    background-image: url(../images/Diseño\ sin\ título.png);
-    background-size:cover;
+    background-image: url(../images/Diseño\ sin\ título2.png);
+    background-size: cover;
     
     
 }
