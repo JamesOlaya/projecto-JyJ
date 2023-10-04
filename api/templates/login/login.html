@@ -14,11 +14,8 @@
                 <input type="text" class="form-control input" placeholder="usuario" aria-label="usuario" aria-describedby="basic-addon1" name="usuario" required>      
                 <h2>Contraseña:</h2>
                 <input type="password" class="form-control input" placeholder="Contraseña" aria-label="Contraseña" aria-describedby="basic-addon1" name ="Contraseña"required>
-                <h2>Cargo:</h2>
-                <select styleid="typeDocument" name="typeDocument" id="typeDocument" size="1">
-                    <option value="AD">Administrador</option>
-                    <option value="Client">Cliente</option>
-                </select>
+                
+                
                 {% if messages %}
                     <ul class="messages">
                         {% for message in messages %}

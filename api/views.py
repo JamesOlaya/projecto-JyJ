@@ -5,7 +5,7 @@ from django.views import View
 from django.views.decorators.csrf import csrf_exempt
 from .forms import create_user,create_producto
 import json
-from .models import Usuario, Encargado, Cliente, Pedido,Producto
+from .models import Usuario, Cliente, Pedido,Producto,Encargado
 from django.contrib import messages 
 
 
@@ -18,25 +18,48 @@ def login(request):
         return render(request, 'login/login.html')
     else:
         clientes = list (Usuario.objects.all())
+        administradores = list (Encargado.objects.all())
         usuario= request.POST['usuario']
         password =request.POST['Contraseña']
-        status = request.POST['typeDocument']
-        c_usuario = False
-        c_password = False
+        ad= 'si'
+        cl= 'si'
+        
+        for administrador in administradores:
+            if usuario == administrador.usuario  :
+                p_usuario = False
+                p_password = False    
+                if usuario == administrador.usuario:
+                    p_usuario = True
+                if password == administrador.password:
+                    p_password = True
+
+                if p_usuario == True and p_password == True:
+                    messages.add_message(request=request, level=messages.SUCCESS, message='El usuario no puede ingresar al apartado de administrador.') 
+                else:
+                    messages.add_message(request=request, level=messages.SUCCESS, message='El usuario y/o la contraseña no son correctos, por favor vuélvalo a intentar.')
+                    return redirect('login')
+            else:
+                ad = 'no'
 
 
-        for cliente in clientes:    
-            if usuario == cliente.usuario and password == cliente.password:
-                c_password = True
-                c_usuario = True
+        for cliente in clientes: 
+            if usuario == cliente.usuario:  
+                p_usuario = False
+                p_password = False    
+                if usuario == cliente.usuario:
+                    p_usuario = True
+                if password == cliente.password:
+                    p_password = True
+                if p_usuario == True and p_password == True and password != '' and usuario != '':
+                    return redirect('cliente')
+                else:
+                    messages.add_message(request=request, level=messages.SUCCESS, message='El usuario y/o la contraseña no son correctos, por favor vuélvalo a intentar.')
+                    return redirect('login')
+            else:
+                cl = 'no'
+        if cl == 'no' and ad == 'no':
+             messages.add_message(request=request, level=messages.SUCCESS, message='No se ha encontrado el usuario en la base de datos   .')
 
-
-        if c_usuario == True and c_password == True and password != '' and usuario != '' and status == "Client":
-            return redirect('cliente')
-        elif c_usuario == True and c_password == True and password != '' and usuario != '' and status == "AD":  
-           messages.add_message(request=request, level=messages.SUCCESS, message='El usuario no puede ingresar al apartado de administrador.')
-        else:
-           messages.add_message(request=request, level=messages.SUCCESS, message='El usuario y/o la contraseña no son correctos, por favor vuélvalo a intentar.')
     return redirect('login')
 
             
