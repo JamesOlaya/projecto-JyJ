@@ -1,156 +1,336 @@
 {% extends 'layouts/base.html' %}
-
 {% block content %}
 <div>
-    <h1 class="title">¡Bienvenido al apartado de clientes!</h>
+    <h1 class="title">¡Bienvenido al apartado de clientes!</h1>
 </div>
 <!DOCTYPE html>
 <html>
-    <body class="background">
-        <div class="cuadro_principal">
-            <h2 class="center">¡Realiza tú pedido!</h2>
-        <div id="carrito" class="center"> 
-        </div>
-        <div id="total"class="center">
-            <strong>Total: $<span id="total-amount">0.00 </span> </strong><button class="btn btn-outline-dark" onclick="vaciarCarrito()"> Reiniciar selecciones</button>
-        </div>
-        <div class="producto center">
-            <h3>Puerta:</h3>
-            <p>Precio: $1000</p>
+    <body class="backgroundC">
+        <div class="center cuadroC">
             <div>
-                <div class="input-group">
-                    <span class="input-group-text">Medidas</span>
-                    <input type="text" aria-label="Medidas" class="form-control" placeholder="Altura" >
-                    <input type="text" aria-label="Medidas" class="form-control" placeholder="Anchura" >
-                </div>       
-            </div>
-            <div class="input-group input-group mb-3">
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Indica información sobre tú pedido">
-              </div>
-            <div>
-                <button class="btn btn-outline-dark"onclick="agregarAlCarrito('Puerta', 1000)">Hacer cotización</button>
-            </div>
-        </div>
-        <div class="producto center">
-            <h3>Ventana:</h3>
-            <p>Precio: $1500</p>
-            <div>
-                <div class="input-group">
-                    <span class="input-group-text">Medidas</span>
-                    <input type="text" aria-label="Medidas" class="form-control" placeholder="Altura" >
-                    <input type="text" aria-label="Medidas" class="form-control" placeholder="Anchura" >
-                </div>       
+                <h1>Realiza tú cotización</h1>
             </div>
             <div>
-                <div class="input-group input-group mb-3">
-                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Indica información sobre tú pedido">
-                  </div>
+                <select class="form-select form-select-lg mb-3" aria-label="Large select example" id="select" name="select">
+                    <option value="Productos" >Productos:</option>
+                    <option value="Puertas">Puertas</option>
+                    <option value="Ventanas">Ventanas</option>
+                    <option value="Cerramientos de Piscinas">Cerramientos de Piscinas</option>
+                    <option value="Divisiones de ducha">Divisiones de ducha</option>
+                    <option value="Balcones en vidrio">Balcones en vidrio</option>
+                    <option value="Fachadas en vidrio">Fachadas en vidrio</option>
+                    <option value="Techos en policarbonato">Techos en policarbonato</option>
+                </select>
             </div>
-            <button class="btn btn-outline-dark" onclick="agregarAlCarrito('Ventana', 1500)">Hacer cotización</button>
-        </div>
-        <div class="producto center">
-            <h3>Cerramiento de Piscina:</h3>
-            <p>Precio: $1500</p>
-            <div>
-                <div class="input-group">
-                    <span class="input-group-text">Medidas</span>
-                    <input type="text" aria-label="Medidas" class="form-control" placeholder="Altura" >
-                    <input type="text" aria-label="Medidas" class="form-control" placeholder="Anchura" >
-                </div>       
-            </div>
-            <div>
-                <div class="input-group input-group mb-3">
-                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Indica información sobre tú pedido">
-                  </div>
-            </div>
-            <button class="btn btn-outline-dark" onclick="agregarAlCarrito('Cerramiento de piscina', 1500)">Hacer cotización</button>
-        </div>
-        <div class="producto center">
-            <h3>Balcones en vidrio:</h3>
-            <p>Precio: $1500</p>
-            <div>
-                <div class="input-group">
-                    <span class="input-group-text">Medidas</span>
-                    <input type="text" aria-label="Medidas" class="form-control altura" placeholder="Altura" >
-                    <input type="text" aria-label="Medidas" class="form-control altura" placeholder="Anchura" >
-                </div>       
-            </div>
-            <div>
-                <div class="input-group input-group mb-3">
-                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Indica información sobre tú pedido">
-                  </div>
-            </div>
-            <button class="btn btn-outline-dark" onclick="agregarAlCarrito('Balcones de vidrio', 1500)">Hacer cotización</button>
-        </div>
-        <div class="producto center">
-            <h3>Espejo:</h3>
-            <p>Precio: $1500</p>
-            <div>
-                <div class="input-group">
-                    <span class="input-group-text">Medidas</span>
-                    <input type="text" aria-label="Medidas" class="form-control altura" placeholder="Altura" >
-                    <input type="text" aria-label="Medidas" class="form-control altura" placeholder="Anchura" >
-                </div>       
-            </div>
-            <div>
-                <div class="input-group input-group mb-3">
-                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Indica información sobre tú pedido">
-                  </div>
-            </div>
-            <button class="btn btn-outline-dark" onclick="agregarAlCarrito('Espejo', 1500)">Hacer cotización</button>
-        </div>
-        <div class="producto center">
-            <h3>Divisiones de ducha en vidrio templado:</h3>
-            <p>Precio: $1500</p>
-            <div>
-                <div class="input-group">
-                    <span class="input-group-text">Medidas</span>
-                    <input type="text" aria-label="Medidas" class="form-control altura" placeholder="Altura" >
-                    <input type="text" aria-label="Medidas" class="form-control altura" placeholder="Anchura" >
-                </div>       
-            </div>
-            <div>
-                <div class="input-group input-group mb-3">
-                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Indica información sobre tú pedido">
-                  </div>
-            </div>
-            <button class="btn btn-outline-dark" onclick="agregarAlCarrito('División de ducha', 1500)">Hacer cotización</button>
-        </div>
-        <script> 
-            let carrito = [];
-            let total = 0;
-            
-            
-            function agregarAlCarrito(producto, precio) {
-                carrito.push({ producto, precio});
-                total += precio;
-                actualizarCarrito();
+            <div id="General">
+                <div id="Puertas" class="oculto">
+                    <div  class="input-group mb-3 ">
+                        <select class="input-group mb-3 form-control" ><option >Seleccione tipo de vidrio:</option>
+                            <option value="vidrio">Vidrios con control solar</option>
+                            <option value="vidrio">Vidrios bajo emisivos</option>
+                            <option value="vidrio">Vidrio templado</option>
+                            <option value="vidrio">Vidrios con cámara o doble acristalamiento</option>
+                            <option value="vidrio">Vidrio laminado</option>
+                            <option value="vidrio">Vidrio sencillo o flotado</option>
+                        </select>
+                        <select class="input-group mb-3 form-control" ><option >Seleccione material para el marco:</option>
+                            <option value="Puertas">Puertas</option> 
+                        </select>               
+                        <select class=" input-group mb-3 form-control" ><option >Seleccione material:</option>               
+                            <option value=""></option>
+                      </select>   
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Medidas</span>
+                            <input type="text" class="form-control" placeholder="Altura" aria-label="Altura">
+                            <input type="text" class="form-control" placeholder="Anchura" aria-label="Anchura">
+                        </div>     
+                    </div>
+                </div>
                 
-            }
-            function actualizarCarrito() {
-                const carritoElement = document.getElementById("carrito");
-                const totalAmountElement = document.getElementById("total-amount");
-                
-                carritoElement.innerHTML = "";
-                
-                carrito.forEach(item => {
-                    const itemElement = document.createElement("div");
-                    itemElement.innerText = `${item.producto}: $${item.precio.toFixed(2)}`;
-                    carritoElement.appendChild(itemElement);
-                });
-                totalAmountElement.innerText = total.toFixed(2);
-            }
-            function vaciarCarrito() {
-                carrito = [];
-                total = 0;
-                actualizarCarrito();
-            }
-            </script>
-        </div>
-        
+                <div id="Ventanas" class="oculto">
+                   <div  class="input-group mb-3 ">
+                        <select class="input-group mb-3 form-control" ><option >Seleccione tipo de vidrio:</option>
+                            <option value="vidrio">Vidrios con control solar</option>
+                            <option value="vidrio">Vidrios bajo emisivos</option>
+                            <option value="vidrio">Vidrio templado</option>
+                            <option value="vidrio">Vidrios con cámara o doble acristalamiento</option>
+                            <option value="vidrio">Vidrio laminado</option>
+                            <option value="vidrio">Vidrio sencillo o flotado</option>
+                        </select>
+                        <select class="input-group mb-3 form-control" ><option >Seleccione material para el marco:</option>
+                            <option value="Puertas">Puertas</option> 
+                        </select>               
+                        <select class=" input-group mb-3 form-control" ><option >Seleccione material:</option>               
+                            <option value=""></option>
+                        </select>   
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Medidas</span>
+                            <input type="text" class="form-control" placeholder="Altura" aria-label="Altura">
+                            <input type="text" class="form-control" placeholder="Anchura" aria-label="Anchura">
+                        </div> 
+                    </div>  
+                </div>
+                <div id="Cerramientos de Piscinas" class="oculto">
+                    <div  class="input-group mb-3 ">
+                         <select class="input-group mb-3 form-control" ><option >Seleccione tipo de vidrio:</option>
+                             <option value="vidrio">Vidrios con control solar</option>
+                             <option value="vidrio">Vidrios bajo emisivos</option>
+                             <option value="vidrio">Vidrio templado</option>
+                             <option value="vidrio">Vidrios con cámara o doble acristalamiento</option>
+                             <option value="vidrio">Vidrio laminado</option>
+                             <option value="vidrio">Vidrio sencillo o flotado</option>
+                         </select>
+                         <select class="input-group mb-3 form-control" ><option >Seleccione material para el marco:</option>
+                             <option value="Puertas">Puertas</option> 
+                         </select>               
+                         <select class=" input-group mb-3 form-control" ><option >Seleccione material:</option>               
+                             <option value=""></option>
+                         </select>   
+                         <div class="input-group mb-3">
+                             <span class="input-group-text">Medidas</span>
+                             <input type="text" class="form-control" placeholder="Altura" aria-label="Altura">
+                             <input type="text" class="form-control" placeholder="Anchura" aria-label="Anchura">
+                         </div> 
+                     </div>  
+                 </div>
+                 <div id="Divisiones de ducha" class="oculto">
+                    <div  class="input-group mb-3 ">
+                         <select class="input-group mb-3 form-control" ><option >Seleccione tipo de vidrio:</option>
+                             <option value="vidrio">Vidrios con control solar</option>
+                             <option value="vidrio">Vidrios bajo emisivos</option>
+                             <option value="vidrio">Vidrio templado</option>
+                             <option value="vidrio">Vidrios con cámara o doble acristalamiento</option>
+                             <option value="vidrio">Vidrio laminado</option>
+                             <option value="vidrio">Vidrio sencillo o flotado</option>
+                         </select>
+                         <select class="input-group mb-3 form-control" ><option >Seleccione material para el marco:</option>
+                             <option value="Puertas">Puertas</option> 
+                         </select>               
+                         <select class=" input-group mb-3 form-control" ><option >Seleccione material:</option>               
+                             <option value=""></option>
+                         </select>   
+                         <div class="input-group mb-3">
+                             <span class="input-group-text">Medidas</span>
+                             <input type="text" class="form-control" placeholder="Altura" aria-label="Altura">
+                             <input type="text" class="form-control" placeholder="Anchura" aria-label="Anchura">
+                         </div> 
+                     </div>  
+                 </div>
+                 <div id="Balcones en vidrio" class="oculto">
+                    <div  class="input-group mb-3 ">
+                         <select class="input-group mb-3 form-control" ><option >Seleccione tipo de vidrio:</option>
+                             <option value="vidrio">Vidrios con control solar</option>
+                             <option value="vidrio">Vidrios bajo emisivos</option>
+                             <option value="vidrio">Vidrio templado</option>
+                             <option value="vidrio">Vidrios con cámara o doble acristalamiento</option>
+                             <option value="vidrio">Vidrio laminado</option>
+                             <option value="vidrio">Vidrio sencillo o flotado</option>
+                         </select>
+                         <select class="input-group mb-3 form-control" ><option >Seleccione material para el marco:</option>
+                             <option value="Puertas">Puertas</option> 
+                         </select>               
+                         <select class=" input-group mb-3 form-control" ><option >Seleccione material:</option>               
+                             <option value=""></option>
+                         </select>   
+                         <div class="input-group mb-3">
+                             <span class="input-group-text">Medidas</span>
+                             <input type="text" class="form-control" placeholder="Altura" aria-label="Altura">
+                             <input type="text" class="form-control" placeholder="Anchura" aria-label="Anchura">
+                         </div> 
+                     </div>  
+                 </div>
+                 <div id="Fachadas en vidrio" class="oculto">
+                    <div  class="input-group mb-3 ">
+                         <select class="input-group mb-3 form-control" ><option >Seleccione tipo de vidrio:</option>
+                             <option value="vidrio">Vidrios con control solar</option>
+                             <option value="vidrio">Vidrios bajo emisivos</option>
+                             <option value="vidrio">Vidrio templado</option>
+                             <option value="vidrio">Vidrios con cámara o doble acristalamiento</option>
+                             <option value="vidrio">Vidrio laminado</option>
+                             <option value="vidrio">Vidrio sencillo o flotado</option>
+                         </select>
+                         <select class="input-group mb-3 form-control" ><option >Seleccione material para el marco:</option>
+                             <option value="Puertas">Puertas</option> 
+                         </select>               
+                         <select class=" input-group mb-3 form-control" ><option >Seleccione material:</option>               
+                             <option value=""></option>
+                         </select>   
+                         <div class="input-group mb-3">
+                             <span class="input-group-text">Medidas</span>
+                             <input type="text" class="form-control" placeholder="Altura" aria-label="Altura">
+                             <input type="text" class="form-control" placeholder="Anchura" aria-label="Anchura">
+                         </div> 
+                     </div>  
+                 </div>
+                 <div id="Techos en policarbonato" class="oculto">
+                    <div  class="input-group mb-3 ">
+                         <select class="input-group mb-3 form-control" ><option >Seleccione tipo de vidrio:</option>
+                             <option value="vidrio">Vidrios con control solar</option>
+                             <option value="vidrio">Vidrios bajo emisivos</option>
+                             <option value="vidrio">Vidrio templado</option>
+                             <option value="vidrio">Vidrios con cámara o doble acristalamiento</option>
+                             <option value="vidrio">Vidrio laminado</option>
+                             <option value="vidrio">Vidrio sencillo o flotado</option>
+                         </select>
+                         <select class="input-group mb-3 form-control" ><option >Seleccione material para el marco:</option>
+                             <option value="Puertas">Puertas</option> 
+                         </select>               
+                         <select class=" input-group mb-3 form-control" ><option >Seleccione material:</option>               
+                             <option value=""></option>
+                         </select>   
+                         <div class="input-group mb-3">
+                             <span class="input-group-text">Medidas</span>
+                             <input type="text" class="form-control" placeholder="Altura" aria-label="Altura">
+                             <input type="text" class="form-control" placeholder="Anchura" aria-label="Anchura">
+                         </div> 
+                     </div>  
+                 </div>
+                   
+            </div>
+        </div>  
+        <script>
+            let select = document.getElementById('select');
+            let puerta = document.getElementById('Puertas');
+            let ventana = document.getElementById('Ventanas');
+            let cerramiento= document.getElementById('Cerramientos de Piscinas')
+            let divisiones = document.getElementById('Divisiones de ducha')
+            let balcones = document.getElementById('Balcones en vidrio')
+            let fachadas= document.getElementById('Fachadas en vidrio')
+            let techos = document.getElementById('Techos en policarbonato')
+
+            select.addEventListener('change', function(){
+                if(select.value == 'Productos'){
+                    ventana.classList.add('oculto')
+                    puerta.classList.add('oculto');
+                    cerramiento.classList.add('oculto')
+                    divisiones.classList.add('oculto')
+                    ventana.classList.remove('visible')
+                    puerta.classList.remove('visible');
+                    cerramiento.classList.remove('visible')
+                    divisiones.classList.remove('visible')
+                    balcones.classList.add('oculto')
+                    balcones.classList.remove('visible')
+                    fachadas.classList.add('oculto')
+                    fachadas.classList.remove('visible')
+                    techos.classList.add('oculto')
+                    techos.classList.remove('visible')
+
+                    }
+                else if(select.value == 'Puertas'){
+                    puerta.classList.remove('oculto')
+                    puerta.classList.add('visible')
+                    ventana.classList.remove('visible')
+                    ventana.classList.add('oculto')
+                    cerramiento.classList.add('oculto')
+                    cerramiento.classList.remove('visible')
+                    divisiones.classList.add('oculto')
+                    divisiones.classList.remove('visible')
+                    balcones.classList.add('oculto')
+                    balcones.classList.remove('visible')
+                    fachadas.classList.add('oculto')
+                    fachadas.classList.remove('visible')
+                    techos.classList.add('oculto')
+                    techos.classList.remove('visible')
+                    }
+                else if (select.value == 'Ventanas'){
+                    ventana.classList.remove('oculto')
+                    ventana.classList.add('visible')
+                    puerta.classList.remove('visible')
+                    puerta.classList.add('oculto')
+                    cerramiento.classList.add('oculto')
+                    cerramiento.classList.remove('visible')
+                    divisiones.classList.add('oculto')
+                    divisiones.classList.remove('visible')
+                    balcones.classList.add('oculto')
+                    balcones.classList.remove('visible')
+                    fachadas.classList.add('oculto')
+                    fachadas.classList.remove('visible')
+                    techos.classList.add('oculto')
+                    techos.classList.remove('visible')
+                }
+                else if(select.value == 'Cerramientos de Piscinas'){
+                    ventana.classList.remove('visible')
+                    ventana.classList.add('oculto')
+                    puerta.classList.remove('visible')
+                    puerta.classList.add('oculto')
+                    cerramiento.classList.remove('oculto')
+                    cerramiento.classList.add('visible')
+                    divisiones.classList.add('oculto')
+                    divisiones.classList.remove('visible')
+                    balcones.classList.add('oculto')
+                    balcones.classList.remove('visible')
+                    fachadas.classList.add('oculto')
+                    fachadas.classList.remove('visible')
+                    techos.classList.add('oculto')
+                    techos.classList.remove('visible')
+                }
+                else if(select.value == 'Divisiones de ducha'){
+                    ventana.classList.remove('visible')
+                    ventana.classList.add('oculto')
+                    puerta.classList.remove('visible')
+                    puerta.classList.add('oculto')
+                    cerramiento.classList.remove('visible')
+                    cerramiento.classList.add('oculto')
+                    divisiones.classList.add('visible')
+                    divisiones.classList.remove('oculto')
+                    balcones.classList.add('oculto')
+                    balcones.classList.remove('visible')
+                    fachadas.classList.add('oculto')
+                    fachadas.classList.remove('visible')
+                    techos.classList.add('oculto')
+                    techos.classList.remove('visible')
+                }
+                else if(select.value == 'Balcones en vidrio'){
+                    ventana.classList.remove('visible')
+                    ventana.classList.add('oculto')
+                    puerta.classList.remove('visible')
+                    puerta.classList.add('oculto')
+                    cerramiento.classList.remove('visible')
+                    cerramiento.classList.add('oculto')
+                    divisiones.classList.add('oculto')
+                    divisiones.classList.remove('visible')
+                    balcones.classList.add('visible')
+                    balcones.classList.remove('oculto')
+                    fachadas.classList.add('oculto')
+                    fachadas.classList.remove('visible')
+                    techos.classList.add('oculto')
+                    techos.classList.remove('visible')
+                }
+                else if(select.value == 'Fachadas en vidrio'){
+                    ventana.classList.remove('visible')
+                    ventana.classList.add('oculto')
+                    puerta.classList.remove('visible')
+                    puerta.classList.add('oculto')
+                    cerramiento.classList.remove('visible')
+                    cerramiento.classList.add('oculto')
+                    divisiones.classList.add('oculto')
+                    divisiones.classList.remove('visible')
+                    balcones.classList.add('oculto')
+                    balcones.classList.remove('visible')
+                    fachadas.classList.add('visible')
+                    fachadas.classList.remove('oculto')
+                    techos.classList.add('oculto')
+                    techos.classList.remove('visible')
+                }
+                else if(select.value == 'Techos en policarbonato'){
+                    ventana.classList.remove('visible')
+                    ventana.classList.add('oculto')
+                    puerta.classList.remove('visible')
+                    puerta.classList.add('oculto')
+                    cerramiento.classList.remove('visible')
+                    cerramiento.classList.add('oculto')
+                    divisiones.classList.add('oculto')
+                    divisiones.classList.remove('visible')
+                    balcones.classList.add('oculto')
+                    balcones.classList.remove('visible')
+                    fachadas.classList.add('oculto')
+                    fachadas.classList.remove('visible')
+                    techos.classList.add('visible')
+                    techos.classList.remove('oculto')
+                } 
+            })
+        </script>
 </body>
 </html>
-
-
-
 {% endblock %}  
+

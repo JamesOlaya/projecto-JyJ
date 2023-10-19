@@ -1,11 +1,23 @@
  
-.input-group{
-    margin-bottom: 1rem;
-    padding-left: 10%;
-    padding-right: 10%;
+.backgroundC{
+    background-image: url(../images/Diseño\ sin\ título2.png);
+    background-size:cover;
+    width: 100%;
 }
-.inputM{
-    margin-bottom: 1rem;
-    padding-left: 10%;
-    padding-right: 10%;
+
+.cuadroC{
+    border: rgb(218, 218, 218) 5px solid;
+    background-color: rgb(218, 218, 218);
+    padding: 2% 15% 5% 15%;
+    margin: 2% 3% 0.5% 2%;
+    border-radius: 2.5rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    font-family: 'Happy Monkey', cursive;
+}
+
+.oculto{
+    display: none;
+}
+.visible{
+    display: block;
 }

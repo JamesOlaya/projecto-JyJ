@@ -6,12 +6,12 @@
         <div class="center">
             <h1 class="iniciar_sesion">¡Ingresa con tu cuenta!</h1>
         </div>
-        <form method="post">
+        <form action="{% url 'login' %}" method="post">
             {% csrf_token %}
             <div class="center espacio">
             
                 <h2>Usuario</h2>
-                <input type="text" class="form-control input" placeholder="usuario" aria-label="usuario" aria-describedby="basic-addon1" name="usuario" required>      
+                <input type="text" class="form-control input" placeholder="Usuario" aria-label="Usuario" aria-describedby="basic-addon1" name="usuario" required>      
                 <h2>Contraseña:</h2>
                 <input type="password" class="form-control input" placeholder="Contraseña" aria-label="Contraseña" aria-describedby="basic-addon1" name ="Contraseña"required>
                 

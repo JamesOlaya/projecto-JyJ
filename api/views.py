@@ -1,8 +1,8 @@
 from django.shortcuts import render,redirect
-from django.http.response import JsonResponse
 from django.utils.decorators import method_decorator
-from django.views import View
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import login
 from .forms import create_user,create_producto
 import json
 from .models import Usuario, Cliente, Pedido,Producto,Encargado
@@ -21,8 +21,7 @@ def login(request):
         administradores = list (Encargado.objects.all())
         usuario= request.POST['usuario']
         password =request.POST['Contraseña']
-        ad= 'si'
-        cl= 'si'
+
         
         for administrador in administradores:
             if usuario == administrador.usuario  :
@@ -38,8 +37,6 @@ def login(request):
                 else:
                     messages.add_message(request=request, level=messages.SUCCESS, message='El usuario y/o la contraseña no son correctos, por favor vuélvalo a intentar.')
                     return redirect('login')
-            else:
-                ad = 'no'
 
 
         for cliente in clientes: 
@@ -55,16 +52,10 @@ def login(request):
                 else:
                     messages.add_message(request=request, level=messages.SUCCESS, message='El usuario y/o la contraseña no son correctos, por favor vuélvalo a intentar.')
                     return redirect('login')
-            else:
-                cl = 'no'
-        if cl == 'no' and ad == 'no':
-             messages.add_message(request=request, level=messages.SUCCESS, message='No se ha encontrado el usuario en la base de datos   .')
-
+            
     return redirect('login')
 
             
-
-
 def create_account(requst):
     if requst.method == 'GET':
         return render(requst, 'create_account/create_account.html',{
@@ -76,20 +67,24 @@ def create_account(requst):
         correo = requst.POST['correo']
         telefono = requst.POST['telefono']
         password = requst.POST['contraseña']
+        if nombre != '' and usuario != '' and correo != '' and telefono != '' and password != '':
+            Cliente.objects.create(usuario=usuario, password=password)
+            Usuario.objects.create(nombre=nombre,usuario=usuario,correo=correo,telefono=telefono,password=password)
+            
+            return redirect('/login')
+        return redirect('/occount')
 
-        Cliente.objects.create(usuario=usuario, password=password)
-        Usuario.objects.create(nombre=nombre,usuario=usuario,correo=correo,telefono=telefono,password=password)
-        return redirect('/login')
 
-    
 def administrador(request):
     return render(request, 'administrador/administrador.html')
+
 
 def cliente(request):
     return render(request, 'cliente/cliente.html')
 
 def usuario(request):
     return render(request, 'usuario/usuario.html')
+
 
 def cambiar_precios(request):
     if request.method == 'PUT':
@@ -105,7 +100,8 @@ def cambiar_precios(request):
         return render(request, 'create_account/create_account.html',{
             'form': create_user,
         })
-    
+
+   
 def create_product(request):
     if request.method == 'GET':
         return render(request, 'create_account/create_account.html',{
@@ -118,6 +114,7 @@ def create_product(request):
 
         Producto.objects.create(nombreP=nombre, precioP=precio)
         return redirect('/login')
+
 
 def delete_material(request):
     if request.method == 'delete':

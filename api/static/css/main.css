@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
-body{
-    height: 100%;
-}
+
 .title{
     text-align: center;
     font-family: 'Happy Monkey', cursive;
@@ -51,7 +49,15 @@ body{
     font-size:large ;
 }
 
-
+.backgroundS{
+    padding:1%1%1%1%;
+    margin: 1% 10% 1% 10%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border-radius: 2.5rem;  
+    
+    background-color: rgba(143, 143, 143, 0.301);
+    
+}
 .cuadro_principal{
     
     padding:1%1%1%1%;
@@ -66,7 +72,10 @@ body{
     align-items: center;
     align-content: center;
 }
-
+.inputPrincipal{
+    padding: 1% 20% 1% 20%;
+    
+}
 .log{
     display: flex;
     justify-content: end;
@@ -95,36 +104,29 @@ body{
     padding-top: 5%;
     margin-top: 5%;
 }
-.img_productos{
-    border-radius: 1.5rem 3rem 1.5rem 3rem;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-    
-}
+
 
 .images > img{
-    border-radius: 1rem;
-    width: 100%;
+    border-radius: 1.5rem;
+    width: 17.5rem;
     height: 15rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    
     
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     
 }
 .images{
-    display: grid;
+    display:block;
     padding-bottom: 1rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    grid-template-columns: 
-        repeat(
-            auto-fit,
-            minmax(150px,1fr)
-        );
-        gap: 20px;
-}
-
-.image:hover{
-    transform: scale(1.2);
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    padding-left: 2rem;
+        
 
 }
+
+
+
+
+.image:hover{animation:shake-right 1.1s linear both} @keyframes shake-right{0%,100%{transform:rotate(0deg);transform-origin:100% 50%}10%{transform:rotate(2deg)}20%,40%,60%{transform:rotate(-4deg)}30%,50%,70%{transform:rotate(4deg)}80%{transform:rotate(-2deg)}90%{transform:rotate(2deg)}}
+
