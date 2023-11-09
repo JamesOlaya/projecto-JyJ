@@ -9,14 +9,6 @@ class Usuario(models.Model):
     estatus = models.CharField(max_length=8, default='cliente', null=False, blank=False)
 
 
-class Encargado(models.Model):
-    usuario = models.CharField(max_length=20, null=False, blank=False)
-    password = models.CharField(max_length=20, null=False, blank=False)
-
-class Cliente(models.Model):
-    usuario = models.CharField(max_length=20, null=False, blank=False)
-    password = models.CharField(max_length=20, null=False, blank=False)
-
 class Material(models.Model):
     nombreM=models.CharField(max_length=20, null=False, blank=False)
     precioM=models.BigIntegerField( null=False, blank=False)
@@ -34,13 +26,13 @@ class Producto(models.Model):
 class Pedido(models.Model):
     descripccion = models.CharField(max_length=200, null=False, blank=False)
     Proyecto = models.CharField(max_length=20, null=False, blank=False)
-    idCliente = models.ForeignKey(Cliente,on_delete=models.CASCADE )
+    idCliente = models.ForeignKey(Usuario,on_delete=models.CASCADE )
     cotizacion = models.CharField(max_length=10, null=False, blank=False)
     direccion = models.CharField(max_length=10, null=False, blank=False)
 
 class Estado(models.Model):
     idProducto = models.ForeignKey(Producto,on_delete=models.CASCADE )
-    idCliente = models.ForeignKey(Cliente,on_delete=models.CASCADE )
+    idCliente = models.ForeignKey(Usuario,on_delete=models.CASCADE )
     direccion = models.CharField(max_length=10)
 
 

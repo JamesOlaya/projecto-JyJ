@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login
 from .forms import create_user,create_producto
 import json
-from .models import Usuario, Cliente, Pedido,Producto,Encargado
+from .models import Usuario , Pedido,Producto
 from django.contrib import messages 
 
 
@@ -17,42 +17,23 @@ def login(request):
     if request.method == 'GET':
         return render(request, 'login/login.html')
     else:
-        clientes = list (Usuario.objects.all())
-        administradores = list (Encargado.objects.all())
+        usuarios = list (Usuario.objects.all())
+
         usuario= request.POST['usuario']
         password =request.POST['Contraseña']
 
         
-        for administrador in administradores:
-            if usuario == administrador.usuario  :
-                p_usuario = False
-                p_password = False    
-                if usuario == administrador.usuario:
-                    p_usuario = True
-                if password == administrador.password:
-                    p_password = True
-
-                if p_usuario == True and p_password == True:
+        for user in usuarios:
+            if user.estatus == 'admin':
+                if usuario == user.usuario and password == user.password:
                     return redirect('administrador')
-                else:
-                    messages.add_message(request=request, level=messages.SUCCESS, message='El usuario y/o la contraseña no son correctos, por favor vuélvalo a intentar.')
-                    return redirect('login')
-
-
-        for cliente in clientes: 
-            if usuario == cliente.usuario:  
-                p_usuario = False
-                p_password = False    
-                if usuario == cliente.usuario:
-                    p_usuario = True
-                if password == cliente.password:
-                    p_password = True
-                if p_usuario == True and p_password == True and password != '' and usuario != '':
+                
+            elif user.estatus == 'cliente':
+                if usuario == user.usuario and password == user.password:
                     return redirect('cliente')
-                else:
-                    messages.add_message(request=request, level=messages.SUCCESS, message='El usuario y/o la contraseña no son correctos, por favor vuélvalo a intentar.')
-                    return redirect('login')
-            
+            else:
+                messages.add_message(request=request, level=messages.SUCCESS, message='El usuario y/o la contraseña no son correctos, por favor vuélvalo a intentar.')
+                return redirect('login')
     return redirect('login')
 
             
@@ -68,7 +49,6 @@ def create_account(requst):
         telefono = requst.POST['telefono']
         password = requst.POST['contraseña']
         if nombre != '' and usuario != '' and correo != '' and telefono != '' and password != '':
-            Cliente.objects.create(usuario=usuario, password=password)
             Usuario.objects.create(nombre=nombre,usuario=usuario,correo=correo,telefono=telefono,password=password)
             
             return redirect('/login')
