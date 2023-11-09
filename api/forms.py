@@ -10,9 +10,10 @@ class create_user(UserCreationForm):
     telefono= forms.IntegerField()
     
 
-class create_producto(forms.Form):
-    nombreP=forms.CharField(max_length=30)
-    precioP=forms.IntegerField()
+class create_material(forms.Form):
+    nombreM=forms.CharField(max_length=30)
+    precioM=forms.IntegerField()
+    cantidadM = forms.IntegerField()
 
 class crear_pedido(forms.Form):
     descripccion = forms.CharField(max_length=200)

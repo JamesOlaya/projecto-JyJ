@@ -8,39 +8,23 @@
     </header>
 
     <nav class="nav">
-        <center>
-            <ul>
+            <ul class="InicoAD">
                 <li><a href="#">Inicio</a></li>
-                <li><a href="#">Productos</a></li>
+                <li><a href="#product-list">Material</a></li>
             </ul>
-        </center>
     </nav>
-    <div id="search-form input-group mb-3" class="buscador">
-        <form id="product-search-form" class="form">
-            <input type="text" id="search-input" placeholder="Buscar productos...">
-            <button type="submit">Buscar</button>
-        </form>
-    </div>
 
-    <section id="product-list" class="cuadro section">
-        <h2>Lista de Productos</h2>
-        <div class="product-card">
+
+    <section id="product-list" class="cuadro">
+       <h2>Lista de Material</h2>
+        <!-- <div class="product-card">
             <h3>Producto 1</h3>
             <p>Descripción del Producto 1</p>
             <p>Precio: $.00</p>
             <div class="product-actions">
                 <button class="delete-button"><i class="fas fa-trash-alt"></i> Eliminar</button>
                 <button class="edit-button"><i class="fas fa-edit"></i> Modificar</button>
-            </div>
-        </div>
-        <div class="product-card">
-            <h3>Producto 2</h3>
-            <p>Descripción del Producto 2</p>
-            <p>Precio: $20.00</p>
-            <div class="product-actions">
-                <button class="delete-button boton"><i class="fas fa-trash-alt"></i> Eliminar</button>
-                <button class="edit-button boton"><i class="fas fa-edit"></i> Modificar</button>
-            </div>
+            </div>-->
         </div>
     </section>
 
@@ -49,20 +33,14 @@
         <h2>Agregar Producto</h2>
         <form class="form">
             <label for="product-name" class="label">Nombre del Producto:</label>
-            <input type="text" id="product-name" name="product-name" required>
-        
-            <label for="product-description" class="label">Descripción:</label>
-            <textarea id="product-description" name="product-description"></textarea>
+            <input type="text" id="product-name" name="material-name" required>
 
             <label for="product-price" class="label">Precio:</label>
-            <input type="number" id="product-price" name="product-price" step="0.01" min="0" required>
+            <input type="number" id="product-price" name="material-price" step="0.01" min="1" required>
 
+            <label for="product-cantidad" class="label">cantidad:</label>
+            <input type="number" id="product-price" name="material-cantidad" step="0.01" min="1" required>
 
-            <label for="product-price" class="label">cantidad:</label>
-            <input type="number" id="product-price" name="product-price" step="0.01" min="0" required>
-
-
-        
             <button type="button" class="btn btn-outline-danger boton">Agregar Producto</button>
         
         </form>

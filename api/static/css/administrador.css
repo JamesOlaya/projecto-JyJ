@@ -12,38 +12,38 @@
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-#admin {
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color:rgb(255, 255, 255);
-    background-image: url(../images/Diseño\ sin\ título2.png);
+    background-image: url(../images/Diseño\ sin\ título.png);
     background-size:cover;
 }
 
 header {
-    color: #da1818;
+    color: #f12000;
     text-align: center;
     padding: 20px 0;
 }
 
-.nav ul {
+nav ul {
     list-style: none;
     padding: 0;
 }
 
-.nav li {
+nav li {
     display: inline;
     margin-right: 20px;
 }
 
-.nav a {
+nav a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
 }
 
-.section {
+section {
     background-color: #fff;
     padding: 20px;
     margin: 20px;
@@ -51,12 +51,12 @@ header {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-.form {
+form {
     max-width: 400px;
     margin: 0 auto;
 }
 
-.label {
+label {
     display: block;
     margin-bottom: 5px;
 }
@@ -71,7 +71,7 @@ textarea {
     border-radius: 5px;
 }
 
-.boton[type="submit"] {
+button[type="submit"] {
     background-color: #333;
     color: #fff;
     border: none;
@@ -80,7 +80,7 @@ textarea {
     border-radius: 5px;
 }
 
-.boton[type="submit"]:hover {
+button[type="submit"]:hover {
     background-color: #555;
 }
 
@@ -112,7 +112,7 @@ footer {
 }
 
 .delete-button{
-    background-color: #f71414;
+    background-color: #ff0202;
     color: #fff;
     border: none;
     padding: 5px 10px;
@@ -132,7 +132,7 @@ footer {
 }
 
 .edit-button {
-    background-color: #00e900;
+    background-color: #e96d00;
     color: #fff;
     border: none;
     padding: 5px 10px;
@@ -144,14 +144,59 @@ footer {
 
 
 .edit-button:hover {
-    background-color: #40ff00;
+    background-color: #f79900;
 }
 
-.buscador{
-    margin-top: 1.5rem;
-    margin-left: 50rem;
+
+
+.InicoAD {
+       margin-left: 40%;
+}
+
+
+.buscador {
     display: flex;
-    box-shadow: rgba(175, 175, 202, 0.26) 0px 0px 16px;
-    background-color:rgb(255, 255, 255);
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+  }
+  
+  #search-form {
+    width: 300px;
+  }
+  
+  #search-input {
+    padding: 10px;
+    width: 70%;
+  }
+  
+  
+  .btnaD[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+  }
 
+
+
+/* 
+  HTML:
+html
+<div class="scrollbar">
+  <div class="content">
+    <!-- Contenido de la barra de desplazamiento -->
+  </div>
+</div>
+
+
+CSS:
+css
+.scrollbar {
+  width: 200px;
+  height: 300px;
+  overflow-y: scroll;
 }
+
+.content {
+  Estilos para el contenido de la barra de desplazamiento */

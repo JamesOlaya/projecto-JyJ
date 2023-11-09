@@ -3,9 +3,9 @@ from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login
-from .forms import create_user,create_producto
+from .forms import create_user,create_material
 import json
-from .models import Usuario , Pedido,Producto
+from .models import Usuario , Pedido,Producto,Material
 from django.contrib import messages 
 
 
@@ -84,16 +84,17 @@ def cambiar_precios(request):
    
 def create_product(request):
     if request.method == 'GET':
-        return render(request, 'create_account/create_account.html',{
-            'form': create_producto,
+        return render(request, 'administrador/administrador.html',{
+            'form': create_material,
         })
     else:
-        nombre = request.POST['nombre']
-        precio = request.POST['precio']
+        nombre = request.POST['material-name']
+        precio = request.POST['material-price']
+        cantidad = request.POST['material-cantidad']
         
 
-        Producto.objects.create(nombreP=nombre, precioP=precio)
-        return redirect('/login')
+        Material.objects.create(nombreM=nombre, precioM=precio , cantidadM = cantidad)
+        return redirect('/admins')
 
 
 def delete_material(request):
