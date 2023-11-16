@@ -60,7 +60,33 @@ def administrador(request):
 
 
 def cliente(request):
-    return render(request, 'cliente/cliente.html')
+    
+    if request.method == 'GET':
+        return render(request, 'cliente/cliente.html')
+    else:
+        desperdicios= 25
+        valor = 0
+        valor2 = 0
+        pedido = request.POST['select']
+        if pedido.value == 'puertas':
+            material = request.POST['materialP']
+            tipo = request.POST['tipoP']
+            altura = request.POST['alturaP']
+            anchura = request.POST['anchoP']
+            if material.value == 'vidrioS':
+                valor = 1000
+            if tipo.value == 'sencilla':
+                valor2 = 2
+            
+            neto= (((altura +anchura) * 2) * valor) * valor2
+            procentaje = neto/ desperdicios
+            cotizacion = neto + desperdicios
+
+
+            
+
+
+        
 
 def usuario(request):
     return render(request, 'usuario/usuario.html')
@@ -79,9 +105,8 @@ def cambiar_precios(request):
     else:
         return render(request, 'create_account/create_account.html',{
             'form': create_user,
-        })
-
-   
+        })  
+    
 def create_product(request):
     if request.method == 'GET':
         return render(request, 'administrador/administrador.html',{
@@ -95,7 +120,6 @@ def create_product(request):
 
         Material.objects.create(nombreM=nombre, precioM=precio , cantidadM = cantidad)
         return redirect('/admins')
-
 
 def delete_material(request):
     if request.method == 'delete':
