@@ -9,7 +9,8 @@
             <div>
                 <h1>Realiza tú cotización</h1>
             </div>
-            <form action="{% url 'cliente' %}" method="post">
+            <form method="post">
+                {% csrf_token %}
                 <div>
                     <select class="form-select form-select-lg mb-3" aria-label="Large select example" id="select" name="select">
                         <option value="Productos" >Productos:</option>
@@ -22,8 +23,10 @@
                         <option value="Techos en policarbonato">Techos en policarbonato</option>
                     </select>
                 </div>
+                
                 <div id="General">
                     <div id="Puertas" class="oculto">
+                        
                         <div  class="input-group mb-3 ">
                             <select class="input-group mb-3 form-control" id="materialP" name="materialP"><option >Seleccione tipo de vidrio:</option>
                                 <option value="vidrioS">Vidrios con control solar</option>
@@ -48,7 +51,7 @@
                                 <input type="text" class="form-control" placeholder="Anchura" aria-label="Anchura" id="anchoP" name="anchoP">
                             </div>
                             <div>
-                                <button type="submit" class="btn btn-outline-danger">Realizar cotización</button>
+                                <button  type="submit" class="btn btn-outline-danger boton">Realizar cotización</button>
                             </div>     
                         </div>
                     </div>
@@ -147,7 +150,7 @@
                              </select>               
                              <select class=" input-group mb-3 form-control" ><option >Seleccione material:</option>               
                                  <option value=""></option>
-                             </select>   
+                                 omo capturar el valor de un select de un formulario creado a partir de un HTML             </select>   
                              <div class="input-group mb-3">
                                  <span class="input-group-text">Medidas</span>
                                  <input type="text" class="form-control" placeholder="Altura" aria-label="Altura">
@@ -209,14 +212,21 @@
                                 <button class="btn btn-outline-danger">Realizar cotización</button>
                             </div>
                          </div>  
+                    </div>
+                    <div id="ResultadoC" class="">
+                        <h2>{{ datos }}:</h2>
+                        <h1>{{ valor }}</h1>
+
+                    </div>
+            </form>         
+                    <div >
+                        <h6>¿Deseas realizar un pedido?, ¡Comunicate con nosotros!</h6>
+                        <i class="fa-brands fa-whatsapp"></i><a href="https://wa.link/14wa5s" style="text-decoration: none; color: rgb(255, 58, 58) ;"> 3113758898</a>
+                        <i class="fa-solid fa-phone"></i><a href="tel:+3113758898" style="text-decoration: none; color: rgb(255, 58, 58) ;"> 3113758898</a>
+                        <i class="fa-regular fa-envelope"></i><a href="mailto:proyectosyconstruccionesjyjsas@gmail.com" style="text-decoration: none; color: rgb(255, 58, 58) ;"> proyectosyconstruccionesjyjsas@gmail.com</a>
+                    </div>    
                 </div>
-                <div >
-                    <h6>¿Deseas realizar un pedido?, ¡Comunicate con nosotros!</h6>
-                    <i class="fa-brands fa-whatsapp"></i><a href="https://wa.link/14wa5s" style="text-decoration: none; color: rgb(255, 58, 58) ;"> 3113758898</a>
-                    <i class="fa-solid fa-phone"></i><a href="tel:+3113758898" style="text-decoration: none; color: rgb(255, 58, 58) ;"> 3113758898</a>
-                    <i class="fa-regular fa-envelope"></i><a href="mailto:proyectosyconstruccionesjyjsas@gmail.com" style="text-decoration: none; color: rgb(255, 58, 58) ;"> proyectosyconstruccionesjyjsas@gmail.com</a>
-                </div>    
-            </div>
+               
         </div>  
         <script>
             let select = document.getElementById('select');
@@ -359,6 +369,37 @@
                     techos.classList.remove('oculto')
                 } 
             })
+            
+            function operacion  () {
+                let valor = 0
+                let valor2 = 0
+                let desperdicios = 25
+
+                if (select.value == puerta )
+
+                    var material = document.getElementById('materialP')
+                    let tipo = document.getElementById('tipoP')
+                    let altura = document.getElementById('alturaP')
+                    let ancho = document.getElementById('anchoP')
+
+                    if (material.value == 'vidrioS')
+                        valor = 1000
+                    if (tipo.value == 'sencilla')
+                        valor2 = 1
+
+                    let neto= ((altura * anchura) * valor) * valor2
+                    let procentaje = neto/ desperdicios
+                    let cotizacion = neto + procentaje
+                    
+                    var resultadoF = document.getElementById('resultadoF')
+                    var resultadoC = document.getElementById('resultadoC')
+
+                    resultadoF.innerHTML = cotizacion
+                    resultadoC.classList.remove('oculto')
+            } ;
+
+            
+
         </script>
 </body>
 </html>

@@ -12,12 +12,12 @@
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-body {
+#admin {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color:rgb(255, 255, 255);
-    background-image: url(../images/Diseño\ sin\ título.png);
+    background-image: url(../images/Diseño\ sin\ título2.png);
     background-size:cover;
 }
 
@@ -71,19 +71,6 @@ textarea {
     border-radius: 5px;
 }
 
-button[type="submit"] {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button[type="submit"]:hover {
-    background-color: #555;
-}
-
 
 footer {
     text-align: center;
@@ -105,15 +92,8 @@ footer {
     margin-top: 0;
 }
 
-.product-actions {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-}
-
 .delete-button{
-    background-color: #ff0202;
-    color: #fff;
+    background-color: #ccc;
     border: none;
     padding: 5px 10px;
     cursor: pointer;
@@ -123,7 +103,7 @@ footer {
 
 .delete-button:hover,
 .edit-button:hover {
-    background-color: #c03a2b;
+    background-color: #e12d2d;
 }
 
 .fa-trash-alt,
@@ -132,7 +112,7 @@ footer {
 }
 
 .edit-button {
-    background-color: #e96d00;
+    background-color: #ccc;
     color: #fff;
     border: none;
     padding: 5px 10px;
@@ -154,6 +134,20 @@ footer {
 }
 
 
+.InicoAD a {
+    text-decoration: none;
+    color: #333; 
+    font-weight: bold;
+    font-size: 16px; 
+    border-bottom: 2px solid transparent; 
+}
+
+.InicoAD a:hover {
+    border-bottom: 2px solid #3498db; 
+}
+
+
+
 .buscador {
     display: flex;
     align-items: center;
@@ -171,7 +165,7 @@ footer {
   }
   
   
-  .btnaD[type="submit"] {
+  .btnaD{
     padding: 10px 20px;
     background-color: #007bff;
     color: white;
@@ -180,23 +174,35 @@ footer {
 
 
 
-/* 
-  HTML:
-html
-<div class="scrollbar">
-  <div class="content">
-    <!-- Contenido de la barra de desplazamiento -->
-  </div>
-</div>
-
-
-CSS:
-css
-.scrollbar {
-  width: 200px;
-  height: 300px;
-  overflow-y: scroll;
+#agregarM{
+    align-items: center;
 }
 
-.content {
-  Estilos para el contenido de la barra de desplazamiento */
+.cuadro {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  button {
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+  }
+

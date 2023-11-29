@@ -12,6 +12,7 @@ class Usuario(models.Model):
 class Material(models.Model):
     nombreM=models.CharField(max_length=20, null=False, blank=False)
     precioM=models.BigIntegerField( null=False, blank=False)
+    descripcionM=models.CharField(max_length=200, default='none')
     cantidadM = models.BigIntegerField( null= False, blank=False, default=1)
 
 class Inventario(models.Model):
