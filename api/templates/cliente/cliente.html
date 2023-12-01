@@ -36,9 +36,20 @@
                                 <option value="vidrioL">Vidrio laminado</option>
                                 <option value="vidrioF">Vidrio sencillo o flotado</option>
                             </select>
+
+
                             <select class="input-group mb-3 form-control" ><option >Seleccione material para el marco:</option>
-                                <option value="Puertas">Puertas</option> 
-                            </select>               
+                                <option value="Acero">Acero</option> 
+                                <option value="Aluminio">Aluminio</option> 
+                            </select>
+                            <select class="input-group mb-3 form-control" ><option >Seleccione tipo de manija:</option>
+                                <option value="pestillo">Manijas con pestillo.</option>
+                                <option value="redondas">Manijas redondas.</option>
+                                <option value="boton">Manijas con botón.</option>
+                                <option value="cerradora">Manijas con cerradura. </option>
+                                <option value="arbol">Manijas de árbol.</option>
+                                <option value="metal">Manijas de metal.</option>
+                            </select>                
                             <select class=" input-group mb-3 form-control" id="tipoP" name="tipoP"><option >Seleccione tipo de puerta:</option>               
                                 <option value="sencilla">Sencilla</option>
                                 <option value="sencillaC">Corrediza sencilla</option>
@@ -47,8 +58,8 @@
                           </select>   
                             <div class="input-group mb-3">
                                 <span class="input-group-text">Medidas</span>
-                                <input type="text" class="form-control" placeholder="Altura" aria-label="Altura" id="alturaP" name="alturaP">
-                                <input type="text" class="form-control" placeholder="Anchura" aria-label="Anchura" id="anchoP" name="anchoP">
+                                <input type="text" class="form-control" placeholder="Altura en M" aria-label="Altura" id="alturaP" name="alturaP">
+                                <input type="text" class="form-control" placeholder="Anchura en M" aria-label="Anchura" id="anchoP" name="anchoP">
                             </div>
                             <div>
                                 <button  type="submit" class="btn btn-outline-danger boton">Realizar cotización</button>
@@ -58,164 +69,164 @@
                     
                     <div id="Ventanas" class="oculto">
                        <div  class="input-group mb-3 ">
-                            <select class="input-group mb-3 form-control" ><option >Seleccione tipo de vidrio:</option>
-                                <option value="vidrio">Vidrios con control solar</option>
-                                <option value="vidrio">Vidrios bajo emisivos</option>
-                                <option value="vidrio">Vidrio templado</option>
-                                <option value="vidrio">Vidrios con cámara o doble acristalamiento</option>
-                                <option value="vidrio">Vidrio laminado</option>
-                                <option value="vidrio">Vidrio sencillo o flotado</option>
+                            <select class="input-group mb-3 form-control" id="materialV" name="materialV"><option >Seleccione tipo de vidrio:</option>
+                                <option value="vidrioS">Vidrios con control solar</option>
+                                <option value="vidrioE">Vidrios bajo emisivos</option>
+                                <option value="vidrioT">Vidrio templado</option>
+                                <option value="vidrioD">Vidrios con cámara o doble acristalamiento</option>
+                                <option value="vidrioL">Vidrio laminado</option>
+                                <option value="vidrioF">Vidrio sencillo o flotado</option>
                             </select>
                             <select class="input-group mb-3 form-control" ><option >Seleccione material para el marco:</option>
-                                <option value="Puertas">Puertas</option> 
+                                <option value="Acero">Acero</option> 
+                                <option value="Aluminio">Aluminio</option>
                             </select>               
-                            <select class=" input-group mb-3 form-control" ><option >Seleccione tipo de ventana:</option>               
+                            <select class=" input-group mb-3 form-control" id="tipoV" name="tipoV"><option >Seleccione tipo de ventana:</option>               
                                 <option value="sencilla">Sencilla</option>
                                 <option value="doble">Doble</option>
-                                <option value="corrediza doble">Corrediza doble</option>
+                                <option value="corredizaD">Corrediza doble</option>
                             </select>   
                             <div class="input-group mb-3">
                                 <span class="input-group-text">Medidas</span>
-                                <input type="text" class="form-control" placeholder="Altura" aria-label="Altura">
-                                <input type="text" class="form-control" placeholder="Anchura" aria-label="Anchura">
+                                <input type="text" class="form-control" placeholder="Altura en M" aria-label="Altura" id="alturaV" name="alturaV">
+                                <input type="text" class="form-control" placeholder="Anchura en M" aria-label="Anchura" id="anchoV" name="anchoV">
                             </div> 
                             <div>
-                                <button class="btn btn-outline-danger">Realizar cotización</button>
+                                <button type="submit" class="btn btn-outline-danger">Realizar cotización</button>
                             </div>     
                         </div>  
                     </div>
                     <div id="Cerramientos de Piscinas" class="oculto">
                         <div class="input-group mb-3 ">
-                             <select class="input-group mb-3 form-control" ><option >Seleccione tipo de vidrio:</option>
-                                 <option value="vidrio">Vidrios con control solar</option>
-                                 <option value="vidrio">Vidrios bajo emisivos</option>
-                                 <option value="vidrio">Vidrio templado</option>
-                                 <option value="vidrio">Vidrios con cámara o doble acristalamiento</option>
-                                 <option value="vidrio">Vidrio laminado</option>
-                                 <option value="vidrio">Vidrio sencillo o flotado</option>
+                             <select class="input-group mb-3 form-control" id="materialC" name="materialC"><option >Seleccione tipo de vidrio:</option>
+                                <option value="vidrioS">Vidrios con control solar</option>
+                                <option value="vidrioE">Vidrios bajo emisivos</option>
+                                <option value="vidrioT">Vidrio templado</option>
+                                <option value="vidrioD">Vidrios con cámara o doble acristalamiento</option>
+                                <option value="vidrioL">Vidrio laminado</option>
+                                <option value="vidrioF">Vidrio sencillo o flotado</option>
                              </select>
-                             <select class="input-group mb-3 form-control" ><option >Seleccione material para el marco:</option>
-                                 <option value="Aluminio">Aluminio</option> 
-                                 <option value="Acero">Acero</option>
-                             </select>               
+                             <select class="input-group mb-3 form-control" id="tipoC" name="tipoC"><option >Seleccione material para el marco:</option>
+                                <option value="Aluminio">Aluminio</option> 
+                                <option value="Acero">Acero</option>
+                            </select>             
                             
                              <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="Area de la piscina" aria-label="Altura">
-                                <input type="text" class="form-control" placeholder="Altura del cerramiento (cm)" aria-label="AlturaC">
-                                <input type="text" class="form-control" placeholder="Distancia entre piscina y el cerramiento (m)" aria-label="Distancia">
+                                <input type="text" class="form-control" placeholder="Area de la piscina" aria-label="Altura" id="areaC" name="areaC">
+                                <input type="text" class="form-control" placeholder="Altura del cerramiento (M)" aria-label="Altura" id="alturaV" name="alturaC">
+                                <input type="text" class="form-control" placeholder="Distancia entre piscina y el cerramiento (M)" aria-label="Distancia"id="distaciaC" name="distaciaC">
                              </div> 
                              <div>
-                                <button class="btn btn-outline-danger">Realizar cotización</button>
+                                <button type="submit" class="btn btn-outline-danger">Realizar cotización</button>
                             </div>     
                          </div>  
                      </div>
                      <div id="Divisiones de ducha" class="oculto">
                         <div  class="input-group mb-3 ">
-                             <select class="input-group mb-3 form-control" ><option >Seleccione tipo de vidrio:</option>
-                                 <option value="vidrio">Vidrios con control solar</option>
-                                 <option value="vidrio">Vidrios bajo emisivos</option>
-                                 <option value="vidrio">Vidrio templado</option>
-                                 <option value="vidrio">Vidrios con cámara o doble acristalamiento</option>
-                                 <option value="vidrio">Vidrio laminado</option>
-                                 <option value="vidrio">Vidrio sencillo o flotado</option>
+                             <select class="input-group mb-3 form-control" id="materialD" name="materialD"><option >Seleccione tipo de vidrio:</option>
+                                <option value="vidrioS">Vidrios con control solar</option>
+                                <option value="vidrioE">Vidrios bajo emisivos</option>
+                                <option value="vidrioT">Vidrio templado</option>
+                                <option value="vidrioD">Vidrios con cámara o doble acristalamiento</option>
+                                <option value="vidrioL">Vidrio laminado</option>
+                                <option value="vidrioF">Vidrio sencillo o flotado</option>
                              </select>
-                             <select class="input-group mb-3 form-control" ><option >Seleccione material para el marco:</option>
-                                 <option value="Puertas">Puertas</option> 
-                             </select>               
-                             <select class=" input-group mb-3 form-control" ><option >Seleccione material:</option>               
-                                 <option value=""></option>
-                             </select>   
+                             <select class=" input-group mb-3 form-control" id="tipoD" name="tipoD"><option >Tipo de división:</option>               
+                                <option value="Cubiciulo">Cubiculo</option>
+                                <option value="LaL">División lado a lado</option>
+                            </select>                
                              <div class="input-group mb-3">
                                  <span class="input-group-text">Medidas</span>
-                                 <input type="text" class="form-control" placeholder="Altura" aria-label="Altura">
-                                 <input type="text" class="form-control" placeholder="Anchura" aria-label="Anchura">
+                                 <input type="text" class="form-control" placeholder="Altura" aria-label="Altura" id="alturaD" name="alturaD">
+                                 <input type="text" class="form-control" placeholder="Anchura" aria-label="Anchura" id="anchoD" name="anchoD">
                              </div> 
                              <div>
-                                <button class="btn btn-outline-danger">Realizar cotización</button>
+                                <button type="submit" class="btn btn-outline-danger">Realizar cotización</button>
                             </div>     
                          </div>  
                      </div>
                      <div id="Balcones en vidrio" class="oculto">
                         <div  class="input-group mb-3 ">
-                             <select class="input-group mb-3 form-control" ><option >Seleccione tipo de vidrio:</option>
-                                 <option value="vidrio">Vidrios con control solar</option>
-                                 <option value="vidrio">Vidrios bajo emisivos</option>
-                                 <option value="vidrio">Vidrio templado</option>
-                                 <option value="vidrio">Vidrios con cámara o doble acristalamiento</option>
-                                 <option value="vidrio">Vidrio laminado</option>
-                                 <option value="vidrio">Vidrio sencillo o flotado</option>
+                             <select class="input-group mb-3 form-control" id="materialB" name="materialB"><option >Seleccione tipo de vidrio:</option>
+                                <option value="vidrioS">Vidrios con control solar</option>
+                                <option value="vidrioE">Vidrios bajo emisivos</option>
+                                <option value="vidrioT">Vidrio templado</option>
+                                <option value="vidrioD">Vidrios con cámara o doble acristalamiento</option>
+                                <option value="vidrioL">Vidrio laminado</option>
+                                <option value="vidrioF">Vidrio sencillo o flotado</option>
                              </select>
-                             <select class="input-group mb-3 form-control" ><option >Seleccione material para el marco:</option>
-                                 <option value="Puertas">Puertas</option> 
-                             </select>               
-                             <select class=" input-group mb-3 form-control" ><option >Seleccione material:</option>               
-                                 <option value=""></option>
-                                 omo capturar el valor de un select de un formulario creado a partir de un HTML             </select>   
-                             <div class="input-group mb-3">
-                                 <span class="input-group-text">Medidas</span>
-                                 <input type="text" class="form-control" placeholder="Altura" aria-label="Altura">
-                                 <input type="text" class="form-control" placeholder="Anchura" aria-label="Anchura">
-                             </div> 
+                             <select class=" input-group mb-3 form-control" id="tpioB" name="tipoB">
+                                <option >Seleccione tipo de baranda:</option>               
+                                <option value="BM">Baranda en metal.</option>
+                                <option value="AVF">Barandillas de aluminio, vinilo y fibra de vidrio.</option>
+                                <option value="HA">Barandillas de hierro forjado y acero inoxidable.</option>
+                             </select>
+  
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Cantidad de Laminas de vidrio" aria-label="CLaminas" id="cantidadB" name="cantidadB">
+                                <input type="text" class="form-control" placeholder="Altura" aria-label="Altura" id="alturaB" name="alturaB">
+                                <input type="text" class="form-control" placeholder="Anchura" aria-label="Anchura" id="anchoB" name="anchoB">
+                            </div>  
                              <div>
-                                <button class="btn btn-outline-danger">Realizar cotización</button>
+                                <button type="submit" class="btn btn-outline-danger">Realizar cotización</button>
                             </div>     
                          </div>  
                      </div>
                      <div id="Fachadas en vidrio" class="oculto">
                         <div  class="input-group mb-3 ">
-                             <select class="input-group mb-3 form-control" ><option >Seleccione tipo de vidrio:</option>
-                                 <option value="vidrio">Vidrios con control solar</option>
-                                 <option value="vidrio">Vidrios bajo emisivos</option>
-                                 <option value="vidrio">Vidrio templado</option>
-                                 <option value="vidrio">Vidrios con cámara o doble acristalamiento</option>
-                                 <option value="vidrio">Vidrio laminado</option>
-                                 <option value="vidrio">Vidrio sencillo o flotado</option>
+                             <select class="input-group mb-3 form-control" id="materialF" name="materialF"><option >Seleccione tipo de vidrio:</option>
+                                <option value="vidrioS">Vidrios con control solar</option>
+                                <option value="vidrioE">Vidrios bajo emisivos</option>
+                                <option value="vidrioT">Vidrio templado</option>
+                                <option value="vidrioD">Vidrios con cámara o doble acristalamiento</option>
+                                <option value="vidrioL">Vidrio laminado</option>
+                                <option value="vidrioF">Vidrio sencillo o flotado</option>
                              </select>
-                             <select class="input-group mb-3 form-control" ><option >Seleccione material para el marco:</option>
-                                 <option value="Puertas">Puertas</option> 
-                             </select>               
-                             <select class=" input-group mb-3 form-control" ><option >Seleccione material:</option>               
-                                 <option value=""></option>
-                             </select>   
+                             <select class=" input-group mb-3 form-control" id="materialF" name="tipoF"><option >Seleccione material para la unión de los paneles:</option>               
+                                <option value="Aluminio">Aluminio</option> 
+                                <option value="Acero">Acero</option>
+                             </select>                 
                              <div class="input-group mb-3">
-                                 <span class="input-group-text">Medidas</span>
-                                 <input type="text" class="form-control" placeholder="Altura" aria-label="Altura">
-                                 <input type="text" class="form-control" placeholder="Anchura" aria-label="Anchura">
+                                <input type="text" class="form-control" placeholder="Cantidad de paneles de vidrio" aria-label="CPaneles"id="cantidadF" name="cantidadF">
+                                <input type="text" class="form-control" placeholder="Altura de cada panel" aria-label="Altura"id="alturaF" name="alturaF">
+                                <input type="text" class="form-control" placeholder="Anchura de cada panel" aria-label="Anchura"id="anchoF" name="anchoF">
                              </div>
                              <div>
-                                <button class="btn btn-outline-danger">Realizar cotización</button>
+                                <button type="submit" class="btn btn-outline-danger">Realizar cotización</button>
                             </div>      
                          </div>  
                      </div>
                      <div id="Techos en policarbonato" class="oculto">
                         <div  class="input-group mb-3 ">
                              <select class="input-group mb-3 form-control" ><option >Seleccione tipo de vidrio:</option>
-                                 <option value="vidrio">Vidrios con control solar</option>
-                                 <option value="vidrio">Vidrios bajo emisivos</option>
-                                 <option value="vidrio">Vidrio templado</option>
-                                 <option value="vidrio">Vidrios con cámara o doble acristalamiento</option>
-                                 <option value="vidrio">Vidrio laminado</option>
-                                 <option value="vidrio">Vidrio sencillo o flotado</option>
+                                <option value="vidrioS">Vidrios con control solar</option>
+                                <option value="vidrioE">Vidrios bajo emisivos</option>
+                                <option value="vidrioT">Vidrio templado</option>
+                                <option value="vidrioD">Vidrios con cámara o doble acristalamiento</option>
+                                <option value="vidrioL">Vidrio laminado</option>
+                                <option value="vidrioF">Vidrio sencillo o flotado</option>
                              </select>
-                             <select class="input-group mb-3 form-control" ><option >Seleccione material para el marco:</option>
-                                 <option value="Puertas">Puertas</option> 
-                             </select>               
-                             <select class=" input-group mb-3 form-control" ><option >Seleccione material:</option>               
-                                 <option value=""></option>
-                             </select>   
-                             <div class="input-group mb-3">
-                                 <span class="input-group-text">Medidas</span>
-                                 <input type="text" class="form-control" placeholder="Altura" aria-label="Altura">
-                                 <input type="text" class="form-control" placeholder="Anchura" aria-label="Anchura">
+                             <select class="input-group mb-3 form-control"><option >Seleccione material para el marco:</option>
+                                <option value="aluminio">Aluminio</option> 
+                                <option value="acero">Acero</option>
+                            </select>               
+                            <select class=" input-group mb-3 form-control" ><option >Selecciona tipo de techo:</option>               
+                                <option value="curvo">Curvo</option>
+                                <option value="recto">Recto</option>
+                            </select>    
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Cantidad de divisiones" aria-label="divisiones">
+                                <input type="text" class="form-control" placeholder="Medida altura del techo" aria-label="Altura">
+                                <input type="text" class="form-control" placeholder="Medida anchura del techo" aria-label="Anchura">
                              </div> 
                              <div>
-                                <button class="btn btn-outline-danger">Realizar cotización</button>
+                                <button type="submit" class="btn btn-outline-danger">Realizar cotización</button>
                             </div>
                          </div>  
                     </div>
                     <div id="ResultadoC" class="">
                         <h2>{{ datos }}</h2>
-                        <h1>{{ valor }}</h1>
+                        <h1>{{ valor }}</h1> 
 
                     </div>
             </form>         
