@@ -38,11 +38,11 @@
                             </select>
 
 
-                            <select class="input-group mb-3 form-control" ><option >Seleccione material para el marco:</option>
+                            <select class="input-group mb-3 form-control" id="marcoP" name="marcoP"><option >Seleccione material para el marco:</option>
                                 <option value="Acero">Acero</option> 
                                 <option value="Aluminio">Aluminio</option> 
                             </select>
-                            <select class="input-group mb-3 form-control" ><option >Seleccione tipo de manija:</option>
+                            <select class="input-group mb-3 form-control" id="manijaP" name="manijaP"><option >Seleccione tipo de manija:</option>
                                 <option value="pestillo">Manijas con pestillo.</option>
                                 <option value="redondas">Manijas redondas.</option>
                                 <option value="boton">Manijas con botón.</option>
@@ -224,12 +224,14 @@
                             </div>
                          </div>  
                     </div>
+            </form>         
                     <div id="ResultadoC" class="">
                         <h2>{{ datos }}</h2>
+                        <h2>{{ pedido }}</h2>
                         <h1>{{ valor }}</h1> 
 
                     </div>
-            </form>         
+                    
                     <div >
                         <h6>¿Deseas realizar un pedido?, ¡Comunicate con nosotros!</h6>
                         <i class="fa-brands fa-whatsapp"></i><a href="https://wa.link/14wa5s" style="text-decoration: none; color: rgb(255, 58, 58) ;"> 3113758898</a>
